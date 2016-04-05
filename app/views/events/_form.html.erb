@@ -1,0 +1,36 @@
+<%= form_tag do |f| %>
+	
+
+	<fieldset>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :department %>
+		<%= f.select :department, ['Biology', 'College of Medicine', 'Psychology', 'Other'] %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :position %>
+		<%= f.select :position, ['Faculty', 'Postdoc', 'Graduate Student', 'Undergraduate Student', 'Exterior MD', 'Other'] %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :department %>
+		<%= f.select :department, ['Yes', 'No'] %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</fieldset>
+
+
+	<%= f.submit %>
+<% end %>

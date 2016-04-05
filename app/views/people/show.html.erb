@@ -1,0 +1,111 @@
+<% provide(:title,  @person.lname) %>
+
+
+
+<div id="main_con" class="container">
+
+<div class="row">
+
+	<div>
+		<% if @person.search == true %>
+			<div>
+				<h4><%= @person.prefix %> <%= @person.fname %> <%= @person.lname %> is currently accepting new graduate students for the upcoming Fall semester.</h4>
+			</div>
+		<% end %>
+	</div>
+
+   <div id="person_left_show" class="col-sm-6">
+   	  <div class="profile">
+     		  <% unless Rails.application.assets.find_asset("#{@person.user_name}.jpg") %>
+               <%= image_tag("default.gif") %>
+          <% else %>
+              <%= image_tag("#{@person.user_name}.jpg") %>
+          <% end %>
+     	</div>
+   </div>
+   
+   <p> </p>
+
+   <div id="person_right_show" class="col-sm-6 col-md-5 profile_info">
+   		<h2><%= @person.prefix %> <%= @person.fname %> <%= @person.lname %></h2>
+		<h4><%= @person.title %></h4>
+		<dl>
+			<dd><%= @person.position.try(:capitalize) %></dd>
+			<dd><%= @person.school %></dd>
+			<dd><%= @person.building %> <%= @person.office %></dd>
+			<dd><%= @person.phone %></dd>
+			<dd><%= @person.user_name %>@neuro.fsu.edu</dd>
+		</dl>
+   </div>
+  </div>
+
+  <div class="row">
+  		<div class="col-sm-6 profile_desc">
+  			<p> </p>
+  			<dl>
+          <% if @person.interest.present? %>
+    				<dt>Interest</dt>
+    				<dd><%= @person.interest %></dd>
+          <% end %>
+
+          <% if @person.research.present? %>
+    				<dt>Current Reseach</dt>
+    				<dd><%= @person.research %></dd>
+          <% end %>
+
+          <% if @person.pubs.any? %>
+    				<dt>Recent Publications</dt>
+    				<dd>
+    					<table class="table-striped">
+    		  				<tbody>
+    		  					<% @person.pubs.each do |pub| %>
+    									<tr>
+    										<td><%= pub.authors %>, <%= pub.title %>, <%= pub.journal %>, <%= pub.date %> </td> </tr>
+    									<% end %>
+    		  				</tbody>
+    		  			</table>
+    				</dd>
+          <% end %>
+
+
+			</dl>
+
+  		</div>
+
+  		<div class="col-sm-6">
+        <% if @person.labweb.present? %>
+              <p><h3><%= link_to 'Lab Website', (@person.labweb) %></h3></p>
+            <% end %>
+  			<!--Lab Links and people go here. -->
+  			<% if @person.subordinates.any? %>
+          		<h3>Lab Members</h3>
+          		<table>
+          		<% @person.subordinates.each do |sub| %>
+          				<tr>
+          					<td>
+          						<p>
+                        <%= link_to(friendly_person_path(sub.position, sub.user_name)) do %>
+  									       <strong><%= sub.fname %> <%= sub.lname %></strong>
+								        <% end %>,
+                        <% if sub.position == 'grad' %>
+                          Graduate Student
+                        <% elsif sub.position == 'postdoc' %>
+                          Postdoctoral Associate  
+                        <% else %>
+                          <%= sub.position.capitalize %>
+                        <% end %>
+                      </p>
+          					</td>
+          				</tr>
+          			<% end %>
+          		</table>
+          	<% end %>
+          
+  		</div>
+  </div>
+
+</div>
+
+<div>
+  <%= link_to "Show All", people_path %>
+</div>

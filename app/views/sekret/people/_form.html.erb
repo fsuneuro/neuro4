@@ -1,0 +1,126 @@
+<%= form_for [:sekret, person] do |f| %>
+
+	<% if @person.errors.any? %>
+		<div id="error_explanation">
+		    <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+		 
+		    <ul>
+			    <% @person.errors.full_messages.each do |msg| %>
+			      <li><%= msg %></li>
+			    <% end %>
+		    </ul>
+		</div>
+	<% end %>
+
+	<fieldset>
+		<%= f.label :prefix %>
+		<%= f.text_field :prefix %>
+	</fieldset>
+	
+	<fieldset>
+		<%= f.label :First_Name %>
+		<%= f.text_field :fname %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :last_name %>
+		<%= f.text_field :lname %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :user_name %>
+		<%= f.text_field :user_name %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :author_name %>
+		<%= f.text_field :auth_id %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :school %>
+		<%= f.text_field :school %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :position %>
+		<%= f.select :position, ['faculty', 'staff', 'postdoc', 'grad', 'lab tech', 'affiliate'] %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :boss_id %>
+		<%= f.select :boss_id, [[" ", :null], ["D Fadool", 1], ["Arbeitman", 2], ["Bertram", 3], ["Bhide", 4], ["Blaber", 5], ["Bolanos", 6], ["Contreras", 7], ["Eckel", 8], ["J Fadool", 9], ["Feng", 106], ["Hammock", 10], ["Houpt", 11], ["Hull", 12], ["Hyson", 13], ["Johnson", 14], ["Kabbaj", 15], ["Kumar", 16], ["Lee", 17], ["Levenson", 18], ["Li", 19], ["Lyons", 20], ["Megraw", 21], ["Meredith", 22], ["Nowakowski", 23], ["Oclese", 24], ["Ren", 25], ["Spector", 26], ["Stanwood", 27], ["Trombley", 28], ["Y Wang", 29], ["Z Wang", 30], ["Williams", 31], ["Zhou", 32]] %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :lab_name %>
+		<%= f.select :lab_name, [[" ", :null], "D Fadool", "Arbeitman", "Bertram", "Bhide", "Blaber", "Bolanos", "Contreras", "Eckel", "J Fadool", "Feng", "Hammock", "Houpt", "Hull", "Hyson", "Johnson", "Kabbaj", "Kumar", "Lee", "Levenson", "Li", "Lyons", "Megraw", "Meredith", "Nowakowski", "Oclese", "Ren", "Spector", "Stanwood", "Trombley", "Y Wang", "Z Wang", "Williams", "Zhou"] %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :labweb %>
+		<%= f.url_field :labweb %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :building %>
+		<%= f.text_field :building %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :office %>
+		<%= f.text_field :office %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :phone %>
+		<%= f.text_field :phone %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :pi1 %>
+		<%= f.text_field :pi1 %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :pi2 %>
+		<%= f.text_field :pi2 %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :focus %>
+		<%= f.text_field :focus1 %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :focus %>
+		<%= f.text_field :focus2 %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :focus %>
+		<%= f.text_field :focus3 %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :interest %>
+		<%= f.text_area :interest %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :research %>
+		<%= f.text_area :research %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label "Accepting Students" %>
+		<%= f.check_box :search %>
+	</fieldset>
+
+	<%= f.submit %>
+<% end %>
