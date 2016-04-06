@@ -42,6 +42,9 @@ end
 group :development do
 	#surpesses static assets from the log files.
 	gem 'quiet_assets'
+	gem 'capistrano', '2.15.7'
+	# cap tasks to manage puma application server
+	
 end
 
 # Use ActiveModel has_secure_password
