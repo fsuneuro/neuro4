@@ -16,10 +16,10 @@
 
    <div id="person_left_show" class="col-sm-6">
    	  <div class="profile">
-     		  <% unless Rails.application.assets.find_asset("#{@person.user_name}.jpg") %>
-               <%= image_tag("default.gif") %>
+     		  <% unless Rails.application.assets.find_asset("profiles/#{@person.user_name}.jpg") %>
+               <%= image_tag("profiles/default.gif") %>
           <% else %>
-              <%= image_tag("#{@person.user_name}.jpg") %>
+              <%= image_tag("profiles/#{@person.user_name}.jpg") %>
           <% end %>
      	</div>
    </div>
