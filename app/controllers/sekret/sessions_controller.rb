@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class Sekret::SessionsController < ApplicationController
 	skip_before_action :ensure_user_signed_in, only: [:new, :create]
 
 	# Present login form
@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 
 		if user && user.authenticate(params[:password])
 			session[:user_id] = user.id
-			redirect to sekret_person_path
+			redirect to sekret_people_path
 		else
 			redirect_to new_sessions_path, alert: 'Unable to authenticate'
 		end
