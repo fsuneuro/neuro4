@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   get "about/abouthub"
   get "about/history"
-  get "about/affliates"
+  get "about/affiliates"
   get "about/focus"
   
   get "students/studenthub"

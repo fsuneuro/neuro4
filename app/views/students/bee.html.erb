@@ -56,10 +56,10 @@
 
 			<p>
 				<ul>
-				 	<li><a href="/ngsa/brainfacts.pdf">Brain Facts</a></li>
-				    <li><a href="/ngsa/science_of_the_brain.pdf">Neuroscience: The Science of the Brain</a></li>
-				    <li><a href="/ngsa/brain_structure_function.pdf">Neuroanatomy: List of Brain Structure and Function</a></li>
-				    <li><a href="http://freud.psy.fsu.edu/grad.students/psmith/psb3004L/home_page.html">Interactive Study Guide</a></li>
+				 	<li><%= link_to 'Brain Facts', asset_path("brainfacts.pdf") %></li>
+				    <li><%= link_to 'Neuroscience: The Science of the Brain', asset_path("science_of_the_brain.pdf") %></li>
+				    <li><%= link_to 'Neuroanatomy: List of Brain Structure and Function', asset_path("brain_structure_function.pdf") %></li>
+				    <li><%= link_to 'Interactive Study Guide', 'http://freud.psy.fsu.edu/grad.students/psmith/psb3004L/home_page.html', :target => "_blank" %></li>
 				 </ul>
 			</p>
 
@@ -67,9 +67,9 @@
 
 			<p>
 				 <ul>
-				 	<li>Source of Brain Facts: <a href="http://www.sfn.org/index.aspx?pagename=brainFacts&section=publications">Society for Neuroscience</a></li>
-	    			<li>Source of Neuroscience-The Science of the Brain: <a href="http://www.braincampaign.org/Pub/Pub_Main_Display.asp?LC_Docs_ID=2769">International Brain Research Orgnaization</a></li>
-	    			<li><a href="http://www.internationalbrainbee.com/study_mats.html">International Brain Bee</a></li>
+				 	<li>Source of Brain Facts: '<%= link_to 'Society for Neuroscience', 'http://www.sfn.org/index.aspx?pagename=brainFacts&section=publications', :target => "_blank" %></li>
+	    			<li>Source of Neuroscience-The Science of the Brain: <%= link_to 'International Brain Research Orgnaization', 'http://www.braincampaign.org/Pub/Pub_Main_Display.asp?LC_Docs_ID=2769', :target => "_blank" %></li>
+	    			<li><%= link_to 'International Brain Bee', 'http://www.internationalbrainbee.com/study_mats.html', :target => "_blank" %></li>
 				 </ul>
 			</p>
 

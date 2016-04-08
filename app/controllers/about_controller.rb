@@ -6,7 +6,7 @@ class AboutController < ApplicationController
   def history
   end
 
-  def affliates
+  def affiliates
   end
 
   def focus

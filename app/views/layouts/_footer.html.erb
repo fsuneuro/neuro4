@@ -1,13 +1,13 @@
 <footer class="footer">
   <small>
-    The <a href="http://www.fsu.edu/">Florida State University</a> <%= link_to "Neuroscience Program", '/' %>
-    ©copyright 2015.
+    <%= link_to 'The Florida State University', 'http://www.fsu.edu/', :target => "_blank" %> <%= link_to "Neuroscience Program", '/' %>
+    ©copyright 2016.
   </small>
   <nav>
     <ul>
       <li><%= link_to "Login", sekret_people_path %></li>
-      <li><a href="https://webmail.neuro.fsu.edu">Webmail</a></li>
-      <li><%= link_to "Calendar",   'http://calendar.fsu.edu/Lists/Program%20in%20Neuroscience/calendar.aspx' %></li>
+      <li><%= link_to 'Webmail', 'https://webmail.neuro.fsu.edu', :target => "_blank" %></li>
+      <li><%= link_to 'Calendar',   'http://calendar.fsu.edu/Lists/Program%20in%20Neuroscience/calendar.aspx', :target => "_blank" %></li>
     </ul>
   </nav>
 </footer>
