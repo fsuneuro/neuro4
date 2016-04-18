@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   get "events/rushton2015"
   get "events/rushton2014"
   get "events/rushton2013"
+  get "events/rushton2012"
+  get "events/rushton2011"
+  get "events/rushtonf2009"
+  get "events/rushtons2009"
 
   get "resource/resourcehub"
   get "resource/resresource"

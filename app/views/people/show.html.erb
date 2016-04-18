@@ -76,6 +76,11 @@
         <% if @person.labweb.present? %>
               <p><h3><%= link_to 'Lab Website', (@person.labweb) %></h3></p>
             <% end %>
+
+            <% if @person.grantlink.present? %>
+              <p><h3><%= link_to 'Training Grant Opportunities', (@person.grantlink) %></h3></p>
+            <% end %>
+            
   			<!--Lab Links and people go here. -->
   			<% if @person.subordinates.any? %>
           		<h3>Lab Members</h3>
