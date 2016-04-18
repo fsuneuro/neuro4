@@ -58,6 +58,6 @@ class Sekret::PeopleController < SekretController
 		params.require(:person).permit(
 			:fname, :lname, :user_name, :auth_id, :school, :building, 
 			:office, :phone, :pi1, :pi2, :boss_id, :interest, :research, :search, :lab_name,
-			:position, :title, :prefix, :focus1, :focus2, :focus3, :labweb)
+			:position, :title, :prefix, :focus1, :focus2, :focus3, :labweb, :grantlink)
 	end
 end
