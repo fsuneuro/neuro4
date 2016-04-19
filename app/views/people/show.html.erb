@@ -60,7 +60,11 @@
     		  				<tbody>
     		  					<% @person.pubs.each do |pub| %>
     									<tr>
-    										<td><%= pub.authors %>, <%= pub.title %>, <%= pub.journal %>, <%= pub.date %> </td> </tr>
+    										<td><%= pub.authors %>, <%= pub.title %>, <%= pub.journal %>, <%= pub.date %>
+                          <% if pub.link.present? %>
+                            <%= link_to 'PubMed', (pub.link), :target => "_blank" %>
+                          <% end %>
+                        </td> </tr>
     									<% end %>
     		  				</tbody>
     		  			</table>

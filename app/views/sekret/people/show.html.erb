@@ -52,7 +52,11 @@
 		  				<tbody>
 		  					<% @person.pubs.each do |pub| %>
 									<tr>
-										<td><%= pub.authors %>, <%= pub.title %>, <%= pub.journal %>, <%= pub.date %> ||| <%= link_to "Edit", edit_sekret_person_pub_path(@person, pub) %> |
+										<td><%= pub.authors %>, <%= pub.title %>, <%= pub.journal %>, <%= pub.date %> 
+											<% if pub.link.present? %>
+					                            <%= link_to 'PubMed', (pub.link), :target => "_blank" %>
+					                         <% end %>
+											||| <%= link_to "Edit", edit_sekret_person_pub_path(@person, pub) %> |
 							  			 <%= link_to "Delete", sekret_person_pub_path(@person, pub),
 							  			 method: :delete,
 							  			 data: { confirm: "Are you sure?" } %></td> </tr>
