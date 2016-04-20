@@ -7,3 +7,4 @@ class Person < ActiveRecord::Base
 
     validates_presence_of :user_name, :position, :fname, :lname # Needed for friendly URLs
 end
+
