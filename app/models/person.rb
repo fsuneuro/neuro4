@@ -5,5 +5,5 @@ class Person < ActiveRecord::Base
 	has_many :subordinates, class_name: 'Person', foreign_key: 'boss_id'
 
 
-    validates_presence_of :user_name, :position # Needed for friendly URLs
+    validates_presence_of :user_name, :position, :fname, :lname # Needed for friendly URLs
 end

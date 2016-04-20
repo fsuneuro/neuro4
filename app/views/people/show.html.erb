@@ -71,6 +71,10 @@
     				</dd>
           <% end %>
 
+          <% if @person.biblio.present? %>
+            <p><h4><%= link_to 'Comprehensive Bibiolography', (@person.biblio) %></h4></p>
+          <% end %>
+
 
 			</dl>
 

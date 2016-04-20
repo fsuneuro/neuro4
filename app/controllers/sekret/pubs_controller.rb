@@ -58,6 +58,6 @@ class Sekret::PubsController < SekretController
 	def pub_params
 		params.require(:pub).permit(
 			:pubmed_id, :journal, :pages, :date, :type, :link, :authors,
-			:title, :notes, :auth_id)
+			:title, :notes, :auth_id, :file)
 	end
 end

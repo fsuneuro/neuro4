@@ -65,8 +65,11 @@
 		  				</tbody>
 		  			</table>
   					<%= link_to 'Add new Publication', new_sekret_person_pub_path(@person) %>
-
 				</dd>
+
+				<% if @person.biblio.present? %>
+              		<p><h4><%= link_to 'Comprehensive Bibiolography', (@person.biblio) %></h4></p>
+            	<% end %>
 
 				
 			</dl>
