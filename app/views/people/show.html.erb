@@ -34,7 +34,13 @@
 			<dd><%= @person.school %></dd>
 			<dd><%= @person.building %> <%= @person.office %></dd>
 			<dd><%= @person.phone %></dd>
-			<dd><%= @person.user_name %>@neuro.fsu.edu</dd>
+			<dd>
+        <% if @person.email.present? %>
+            <p><%= @person.email %></p>
+          <% else %>
+            <p><%= @person.user_name %>@neuro.fsu.edu</p>
+        <% end %>
+      </dd>
 		</dl>
    </div>
   </div>

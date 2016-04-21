@@ -8,10 +8,10 @@
 # system, you should be using db:schema:load, not running all the migrations
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
-# 
+#
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160420153112) do
+ActiveRecord::Schema.define(version: 20160421183757) do
 
   create_table "people", force: :cascade do |t|
     t.string   "fname",      limit: 255
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20160420153112) do
     t.string   "labweb",     limit: 255
     t.string   "grantlink",  limit: 255
     t.string   "biblio",     limit: 255
+    t.string   "email",      limit: 255
   end
 
   add_index "people", ["boss_id"], name: "index_people_on_boss_id", using: :btree

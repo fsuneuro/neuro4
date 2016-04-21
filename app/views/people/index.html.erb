@@ -54,7 +54,11 @@
 		  	</td>
 		  	<td class="mail">
 		  		<div class="inner">
-		  			<%= person.user_name %>@neuro.fsu.edu
+		  			<% if person.email.present? %>
+							<p><%= person.email %></p>
+						<% else %>
+							<p><%= person.user_name %>@neuro.fsu.edu</p>
+						<% end %>
 		  		</div>
 		  	</td>
 		  </tr>
