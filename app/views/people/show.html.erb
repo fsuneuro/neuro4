@@ -70,7 +70,9 @@
                           <% if pub.link.present? %>
                             <%= link_to 'PubMed', (pub.link), :target => "_blank" %>
                           <% end %>
-                          
+                          <% if pub.file.present? %>
+                            <%= link_to ' | PDF', asset_path("pubfiles/#{pub.file}"), :target => "_blank" %>
+                          <% end %>
                         </td> </tr>
     									<% end %>
     		  				</tbody>
@@ -99,7 +101,7 @@
             
   			<!--Lab Links and people go here. -->
   			<% if @person.subordinates.any? %>
-          		<h3>Lab Members</h3>
+          		<h3>Neuro Grads and Postdocs</h3>
           		<table>
           		<% @person.subordinates.each do |sub| %>
           				<tr>
