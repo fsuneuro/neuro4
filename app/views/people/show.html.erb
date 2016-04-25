@@ -101,19 +101,24 @@
             
   			<!--Lab Links and people go here. -->
   			<% if @person.subordinates.any? %>
-          		<h3>Neuro Grads and Postdocs</h3>
+          		<h3>Lab Members</h3>
           		<table>
           		<% @person.subordinates.each do |sub| %>
           				<tr>
           					<td>
           						<p>
-                        <%= link_to(friendly_person_path(sub.position, sub.user_name)) do %>
-  									       <strong><%= sub.fname %> <%= sub.lname %></strong>
-								        <% end %>,
                         <% if sub.position == 'grad' %>
-                          Graduate Student
+                          <%= link_to(friendly_person_path(sub.position, sub.user_name)) do %>
+                           <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>, Graduate Student
                         <% elsif sub.position == 'postdoc' %>
-                          Postdoctoral Associate  
+                          <%= link_to(friendly_person_path(sub.position, sub.user_name)) do %>
+                           <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>, Postdoctoral Associate  
+                        <% elsif sub.position == 'nn-grad' %>
+                          <%= link_to(sub.labweb) do %>
+                           <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>, Graduate Student
+                        <% elsif sub.position == 'nn-postdoc' %>
+                          <%= link_to(sub.labweb) do %>
+                           <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>, Postdoctoral Associate
                         <% else %>
                           <%= sub.position.capitalize %>
                         <% end %>

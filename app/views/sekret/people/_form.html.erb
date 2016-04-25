@@ -12,17 +12,17 @@
 		</div>
 	<% end %>
 
-	<fieldset>
+	<fieldset class="form-group">
 		<%= f.label :prefix %>
 		<%= f.text_field :prefix %>
 	</fieldset>
 	
-	<fieldset>
+	<fieldset class="form-group">
 		<%= f.label :First_Name %>
 		<%= f.text_field :fname %>
 	</fieldset>
 
-	<fieldset>
+	<fieldset class="form-group">
 		<%= f.label :last_name %>
 		<%= f.text_field :lname %>
 	</fieldset>
@@ -54,7 +54,7 @@
 
 	<fieldset>
 		<%= f.label :position %>
-		<%= f.select :position, ['faculty', 'staff', 'postdoc', 'grad', 'lab tech', 'affiliate'] %>
+		<%= f.select :position, ['faculty', 'staff', 'postdoc', 'grad', 'lab tech', 'affiliate', 'nn-grad', 'nn-postdoc'] %>
 	</fieldset>
 
 	<fieldset>
@@ -69,7 +69,7 @@
 
 	<fieldset>
 		<%= f.label :labweb %>
-		<%= f.url_field :labweb %>
+		<%= f.url_field :labweb %>  ** If Non-Neuro place external address here. **
 	</fieldset>
 
 	<fieldset>

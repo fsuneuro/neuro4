@@ -14,54 +14,18 @@
 	
 	<tbody>
 		<% @people.each do |person| %>
-		  <tr class="people_row">
-		  	<td>
-		  		<div class="portrait">
-		  			<% unless Rails.application.assets.find_asset("profiles/#{person.user_name}S.jpg") %>
-			               <%= image_tag("profiles/defaultP.jpg") %>
-			          <% else %>
-			              <%= image_tag("profiles/#{person.user_name}S.jpg") %>
-			          <% end %>
-		  		</div>
-		  	</td>
-		  	<td class="names">
-		  		<div class="inner">
-		  			<p><%= link_to(friendly_person_path(person.position, person.user_name)) do %>
-  						<strong><%= person.fname %> <%= person.lname %></strong>
-					<% end %></p>
-					
-					<% if person.boss.blank? %>
-							<p><%= person.title %></p>
-						<% else %>
-							<p><%= person.lab_name %> Lab</p>
-						<% end %>
-		  			
-		  			<% if person.position == 'grad' %>
-		  				<p>Graduate Student</p>
-		  			<% elsif person.position == 'postdoc' %>
-                          <p>Postdoctoral Associate</p>
-		  			<% else %>
-		  				<p><%= person.position.capitalize %></p>
-		  			<% end %>
-		  		</div>
-		  	</td>
-		  	<td class="stats">
-		  		<div class="inner">
-		  			<p><%= person.school %></p>
-		  			<p><%= person.building %> <%= person.office %></p>
-		  			<p><%= person.phone %></p>
-		  		</div>
-		  	</td>
-		  	<td class="mail">
-		  		<div class="inner">
-		  			<% if person.email.present? %>
-							<p><%= person.email %></p>
-						<% else %>
-							<p><%= person.user_name %>@neuro.fsu.edu</p>
-						<% end %>
-		  		</div>
-		  	</td>
-		  </tr>
+			<% if person.position == 'grad' %> 
+				<%= render 'row', person: person %>            
+	            <% elsif person.position == 'postdoc' %>
+	            	<%= render 'row', person: person %>
+	            <% elsif person.position == 'faculty' %>
+	            	<%= render 'row', person: person %>
+	            <% elsif person.position == 'staff' %>
+	            	<%= render 'row', person: person %>
+	            <% elsif person.position == 'affiliate' %>
+	            	<%= render 'row', person: person %>
+            <% end %>
+		  	
 		<% end %>
 	</tbody>
 </table>
