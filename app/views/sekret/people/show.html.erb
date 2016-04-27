@@ -27,7 +27,15 @@
    		<h2><%= @person.prefix %> <%= @person.fname %> <%= @person.lname %></h2>
 		<h4><%= @person.title %></h4>
 		<dl>
-			<dd><%= @person.position.capitalize %></dd>
+			<dd>
+		        <% if @person.position == 'grad' %>
+		          Graduate Student
+		        <% elsif @person.position == 'postdoc' %>
+		          Postdoctoral Associate
+		        <% else %>
+		          <%= @person.position.capitalize %>
+		        <% end %>
+      		</dd>
 			<dd><%= @person.school %></dd>
 			<dd><%= @person.building %> <%= @person.office %></dd>
 			<dd><%= @person.phone %></dd>

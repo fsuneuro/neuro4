@@ -30,7 +30,15 @@
    		<h2><%= @person.prefix %> <%= @person.fname %> <%= @person.lname %></h2>
 		<h4><%= @person.title %></h4>
 		<dl>
-			<dd><%= @person.position.try(:capitalize) %></dd>
+			<dd>
+        <% if @person.position == 'grad' %>
+          Graduate Student
+        <% elsif @person.position == 'postdoc' %>
+          Postdoctoral Associate
+        <% else %>
+          <%= @person.position.capitalize %>
+        <% end %>
+      </dd>
 			<dd><%= @person.school %></dd>
 			<dd><%= @person.building %> <%= @person.office %></dd>
 			<dd><%= @person.phone %></dd>
@@ -83,7 +91,7 @@
 
           <% if @person.pubmed.present? || @person.scholar.present? || @person.sci_index.present? %>
             <p>
-              <h4>Bibliography: 
+              <h4>All Publications  
               <% if @person.pubmed.present? %>
                 <%= link_to image_tag("pubmed.png", size: "24", alt: "PubMed"), (@person.pubmed), :target => "_blank", :title => "PubMed" %> 
               <% end %>
@@ -133,7 +141,8 @@
                           <%= link_to(sub.labweb) do %>
                            <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>, Postdoctoral Associate - <%= sub.school %>
                         <% else %>
-                          <%= sub.position.capitalize %>
+                          <%= link_to(friendly_person_path(sub.position, sub.user_name)) do %>
+                           <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>, <%= sub.position.capitalize %>
                         <% end %>
                       </p>
           					</td>
