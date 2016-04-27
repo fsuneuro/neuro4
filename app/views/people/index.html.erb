@@ -16,14 +16,14 @@
 		<% @people.each do |person| %>
 			<% if person.position == 'grad' %> 
 				<%= render 'row', person: person %>            
-	            <% elsif person.position == 'postdoc' %>
-	            	<%= render 'row', person: person %>
-	            <% elsif person.position == 'faculty' %>
-	            	<%= render 'row', person: person %>
-	            <% elsif person.position == 'staff' %>
-	            	<%= render 'row', person: person %>
-	            <% elsif person.position == 'affiliate' %>
-	            	<%= render 'row', person: person %>
+	        <% elsif person.position == 'postdoc' %>
+            	<%= render 'row', person: person %>
+            <% elsif person.position == 'faculty' %>
+            	<%= render 'row', person: person %>
+            <% elsif person.position == 'staff' %>
+            	<%= render 'row', person: person %>
+            <% elsif person.position == 'affiliate' %>
+            	<%= render 'row', person: person %>
             <% end %>
 		  	
 		<% end %>

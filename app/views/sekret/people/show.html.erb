@@ -73,9 +73,21 @@
   					<%= link_to 'Add new Publication', new_sekret_person_pub_path(@person) %>
 				</dd>
 
-				<% if @person.biblio.present? %>
-              		<p><h4><%= link_to 'Comprehensive Bibiolography', (@person.biblio), :target => "_blank" %></h4></p>
-            	<% end %>
+				<% if @person.pubmed.present? || @person.scholar.present? || @person.sci_index.present? %>
+            <p>
+              <h4>Bibliography: 
+              <% if @person.pubmed.present? %>
+                <%= link_to image_tag("pubmed.png", size: "24", alt: "PubMed"), (@person.pubmed), :target => "_blank", :title => "PubMed" %> 
+              <% end %>
+              <% if @person.scholar.present? %>
+                <%= link_to image_tag("scholar.png", size: "24", alt: "Google Scholar"), (@person.scholar), :target => "_blank", :title => "Google Scholar" %> 
+              <% end %>
+              <% if @person.sci_index.present? %>
+                <%= link_to image_tag("sci.png", size: "24", alt: "Science Citation Index"), (@person.sci_index), :target => "_blank", :title => "Science Citation Index" %>
+              <% end %>
+              </h4>
+            </p>
+          <% end %>
             	
 
 				
