@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160421183757) do
+ActiveRecord::Schema.define(version: 20160426183612) do
 
   create_table "people", force: :cascade do |t|
     t.string   "fname",      limit: 255
@@ -36,8 +36,10 @@ ActiveRecord::Schema.define(version: 20160421183757) do
     t.string   "lab_name",   limit: 255
     t.string   "labweb",     limit: 255
     t.string   "grantlink",  limit: 255
-    t.string   "biblio",     limit: 255
+    t.string   "pubmed",     limit: 255
     t.string   "email",      limit: 255
+    t.string   "scholar",    limit: 255
+    t.string   "sci_index",  limit: 255
   end
 
   add_index "people", ["boss_id"], name: "index_people_on_boss_id", using: :btree

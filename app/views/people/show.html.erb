@@ -80,8 +80,21 @@
     				</dd>
           <% end %>
 
-          <% if @person.biblio.present? %>
-            <p><h4><%= link_to 'Comprehensive Bibliography', (@person.biblio), :target => "_blank" %></h4></p>
+
+          <% if @person.pubmed.present? || @person.scholar.present? || @person.sci_index.present? %>
+            <p>
+              <h4>Bibliography: 
+              <% if @person.pubmed.present? %>
+                <%= link_to image_tag("pubmed.png", size: "24", alt: "PubMed"), (@person.pubmed), :target => "_blank", :title => "PubMed" %> 
+              <% end %>
+              <% if @person.scholar.present? %>
+                <%= link_to image_tag("scholar.png", size: "24", alt: "Google Scholar"), (@person.scholar), :target => "_blank", :title => "Google Scholar" %> 
+              <% end %>
+              <% if @person.sci_index.present? %>
+                <%= link_to image_tag("sci.png", size: "24", alt: "Science Citation Index"), (@person.sci_index), :target => "_blank", :title => "Science Citation Index" %>
+              <% end %>
+              </h4>
+            </p>
           <% end %>
           
 
@@ -92,12 +105,12 @@
 
   		<div class="col-sm-6">
         <% if @person.labweb.present? %>
-              <p><h3><%= link_to 'Lab Website', (@person.labweb), :target => "_blank" %></h3></p>
-            <% end %>
+          <p><h3><%= link_to 'Lab Website', (@person.labweb), :target => "_blank" %></h3></p>
+        <% end %>
 
-            <% if @person.grantlink.present? %>
-              <p><h3><%= link_to 'Training Grant Opportunities', (@person.grantlink), :target => "_blank" %></h3></p>
-            <% end %>
+        <% if @person.grantlink.present? %>
+          <p><h3><%= link_to 'Training Grant Opportunities', (@person.grantlink), :target => "_blank" %></h3></p>
+        <% end %>
             
   			<!--Lab Links and people go here. -->
   			<% if @person.subordinates.any? %>
@@ -115,10 +128,10 @@
                            <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>, Postdoctoral Associate  
                         <% elsif sub.position == 'nn-grad' %>
                           <%= link_to(sub.labweb) do %>
-                           <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>, Graduate Student
+                           <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>, Graduate Student - <%= sub.school %>
                         <% elsif sub.position == 'nn-postdoc' %>
                           <%= link_to(sub.labweb) do %>
-                           <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>, Postdoctoral Associate
+                           <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>, Postdoctoral Associate - <%= sub.school %>
                         <% else %>
                           <%= sub.position.capitalize %>
                         <% end %>

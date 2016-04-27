@@ -59,6 +59,6 @@ class Sekret::PeopleController < SekretController
 			:fname, :lname, :user_name, :auth_id, :school, :building, 
 			:office, :phone, :pi1, :pi2, :boss_id, :interest, :research,
 			:search, :lab_name, :position, :title, :prefix, :focus1, :focus2,
-			:focus3, :labweb, :grantlink, :biblio, :email) 
+			:focus3, :labweb, :grantlink, :pubmed, :email, :scholar, :sci_index) 
 	end
 end
