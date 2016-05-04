@@ -25,7 +25,12 @@
 		  			<% elsif person.position == 'postdoc' %>
                           <p>Postdoctoral Associate</p>
 		  			<% else %>
-		  				<p><%= person.position.capitalize %></p>
+		  				<p>
+		  					<%= person.position.capitalize %>
+		  					<% if person.search == true %>
+		  					 - <font color="red">Currently Accepting Students</font>
+		  					 <% end %>
+		  				</p>
 		  			<% end %>
 		  		</div>
 		  	</td>
