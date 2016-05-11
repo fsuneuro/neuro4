@@ -6,6 +6,8 @@ class PeopleController < ApplicationController
 
 		if params[:filter_by]
     		@people = Person.where(:position => params[:filter_by])
+    	elsif 
+    		@people = Person.where("search = ?", params[:filter_by] == "true")
   		else
     		@people = Person.all
   		end

@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get "about/history"
   get "about/affiliates"
   get "about/focus"
+  get "about/contact"
   
   get "students/studenthub"
   get "students/tribeta"
