@@ -1,5 +1,5 @@
 class SekretController < ApplicationController
-    before_action :ensure_user_signed_in
+      before_action :ensure_user_signed_in
 
   private
   def ensure_user_signed_in
@@ -13,5 +13,6 @@ class SekretController < ApplicationController
       @current_user ||=User.find(session[:user_id])
     end
   end
+  helper_method :current_user
 
 end
