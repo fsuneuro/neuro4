@@ -12,4 +12,8 @@ class AboutController < ApplicationController
   def focus
   end
 
+  def contact
+  	
+  end
+
 end
