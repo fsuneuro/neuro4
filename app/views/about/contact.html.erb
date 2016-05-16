@@ -1,14 +1,18 @@
 <% provide(:title, "Contact Us") %>
 
-<div class="hub_wrap">
-	<div class="hub_header_image">
-		<%= image_tag('banners/contact_b.jpg') %>
-	</div>
-	<div id="hub_text">
+<div class="row">
+		<div id="hub_text" class="col-sm-12">
+			<div class="hub_header_image">
+				<%= image_tag ('banners/contact_b.jpg') %>
+			</div>
+			<h1> </h1>
+			<p class="hub_para"></p>
+			<p class="hub_para"></p>
+			<div id="hub_text">
 		
-		<h3>Location and Mailing Address</h3>
-		<p>
-			<ul>
+		<h3 class="hub_para">Location and Mailing Address</h3>
+		<p class="hub_para">
+			<ul class="hub_para">
 				<li>FSU Program in Neuroscience</li>
 				<li>PDB C241</li>
 				<li>1107 W. Call Street</li>
@@ -16,41 +20,43 @@
 			</ul>
 		</p>
 
-		<h3>Info About Graduate Applications and Admissions </h3>
-		<p>
-			<ul>
+		<h3 class="hub_para">Info About Graduate Applications and Admissions </h3>
+		<p class="hub_para">
+			<ul class="hub_para">
 				<li><%= mail_to "info@neuro.fsu.edu" %></li>
 				<li><%= phone_number_link("(850) 644-3076") %></li>
 			</ul>
 		</p>
 
-		<h3>Info About Outreach Activities and Public Awareness of Neuroscience</h3>
-		<p>
-			<ul>
+		<h3 class="hub_para">Info About Outreach Activities and Public Awareness of Neuroscience</h3>
+		<p class="hub_para">
+			<ul class="hub_para">
 				<li><%= mail_to "info@neuro.fsu.edu" %></li>
 				<li><%= phone_number_link("(850) 644-3076") %></li>
 			</ul>
-		</p>
+		</p class="hub_para">
 
-		<h3>Neuroscience IT Services</h3>
-		<p>
-			<ul>
+		<h3 class="hub_para">Neuroscience IT Services</h3>
+		<p class="hub_para">
+			<ul class="hub_para">
 				<li><%= mail_to "support@neuro.fsu.edu" %></li>
 				<li><%= phone_number_link("(850) 644-4876") %></li>
 			</ul>
 		</p>
 
-		<h3>Neuroscience Art, Publication, and Photography Services</h3>
-		<p>
-			<ul>
+		<h3 class="hub_para">Neuroscience Art, Publication, and Photography Services</h3>
+		<p class="hub_para">
+			<ul class="hub_para">
 				<li><%= mail_to "graphics@neuro.fsu.edu" %></li>
 				<li><%= phone_number_link("(850) 644-5048") %></li>
 			</ul>
 		</p>
 
 	</div>
+		</div>
 
-</div>
+		
+	</div>
 
 
 
