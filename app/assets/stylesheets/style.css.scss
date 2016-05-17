@@ -154,13 +154,15 @@
 
   .home_show {
     @include size(mdu) {
-      
+      padding-left: 32px;
+      width: 739px;
     }
     @include size(lgu) {
-   
+      width: 972px;
     }
     @include size(xlu) {
-      width: 1040px;
+      padding-left: 32px;
+      width: 1066px;
     }
   }
 
@@ -221,13 +223,14 @@
       padding-left: 5px;
     }
     @include size(mdu) {
-      margin-top: 8px;
+      margin-top: 12px;
       a {
         padding: 0px;
       }
       
     }
     @include size(lgu) {
+      margin-top: 8px;
     }
     @include size(xlu) {
     }
