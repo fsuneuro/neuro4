@@ -32,6 +32,10 @@
 		          Graduate Student
 		        <% elsif @person.position == 'postdoc' %>
 		          Postdoctoral Associate
+		        <% elsif @person.position == 'labman' %>
+		  			Lab Manager
+		  		<% elsif @person.position == 'labtech' %>
+		  			Lab Tech
 		        <% else %>
 		          <%= @person.position.capitalize %>
 		        <% end %>
@@ -124,7 +128,11 @@
 									<% if sub.position == 'grad' %>
 			                          Graduate Student
 			                        <% elsif sub.position == 'postdoc' %>
-			                          Postdoctoral Associate  
+			                          Postdoctoral Associate
+			                        <% elsif sub.position == 'labman' %>
+			                          Lab Manager
+			                        <% elsif sub.position == 'labtech' %>
+			                          Lab Tech 
 			                        <% else %>
 			                          <%= sub.position.capitalize %>
 			                        <% end %>

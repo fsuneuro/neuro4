@@ -35,6 +35,10 @@
           Graduate Student
         <% elsif @person.position == 'postdoc' %>
           Postdoctoral Associate
+        <% elsif @person.position == 'labman' %>
+          Lab Manager
+        <% elsif @person.position == 'labtech' %>
+          Lab Tech
         <% else %>
           <%= @person.position.capitalize %>
         <% end %>
@@ -140,6 +144,12 @@
                         <% elsif sub.position == 'nn-postdoc' %>
                           <%= link_to(sub.labweb) do %>
                            <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>, Postdoctoral Associate - <%= sub.school %>
+                        <% elsif sub.position == 'labman' %>
+                            <%= link_to(friendly_person_path(sub.position, sub.user_name)) do %>
+                              <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>, Lab Manager
+                        <% elsif sub.position == 'labtech' %>
+                          <%= link_to(friendly_person_path(sub.position, sub.user_name)) do %>
+                            <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>, Lab Tech
                         <% else %>
                           <%= link_to(friendly_person_path(sub.position, sub.user_name)) do %>
                            <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>, <%= sub.position.capitalize %>

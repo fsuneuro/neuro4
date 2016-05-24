@@ -40,6 +40,12 @@
 
 		  			<% if person.position == 'grad' %>
 		  				<p>Graduate Student</p>
+		  			<% elsif person.position == 'postdoc' %>
+		  				<p>Postdoctoral Associate</p>
+		  			<% elsif person.position == 'labman' %>
+		  				<p>Lab Manager</p>
+		  			<% elsif person.position == 'labtech' %>
+		  				<p>Lab Tech</p>
 		  			<% else %>
 		  				<p><%= person.position.capitalize %></p>
 		  			<% end %>
