@@ -125,6 +125,7 @@
         <% end %>
             
   			<!--Lab Links and people go here. -->
+
   			<% if @person.subordinates.any? %>
           		<h3>Lab Members</h3>
           		<table>
@@ -160,6 +161,12 @@
           			<% end %>
           		</table>
           	<% end %>
+
+            <% if @person.boss_id >= 1 %>
+              <h3>Faculty Advisor</h3>
+              <p><%= link_to(friendly_person_path(@person.boss.position, @person.boss.user_name)) do %>
+                           <strong><%= @person.boss.fname %> <%= @person.boss.lname %></strong><% end %>, <%= @person.boss.school %></p>
+            <% end %>
           
   		</div>
   </div>
