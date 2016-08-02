@@ -6,15 +6,12 @@
 
 <div class="row">
 
-	<div>
-		<% if @person.search == true %>
-			<div>
-				<h4><%= @person.prefix %> <%= @person.fname %> <%= @person.lname %> is currently accepting new graduate students for the upcoming Fall semester.</h4>
-			</div>
-		<% end %>
-	</div>
-
    <div id="person_left_show" class="col-sm-6">
+    <% if @person.search == true %>
+      <div>
+        <h4><%= @person.prefix %> <%= @person.fname %> <%= @person.lname %> is currently accepting new students.</h4>
+      </div>
+    <% end %>
    	  <div class="profile">
      		  <% unless Rails.application.assets.find_asset("profiles/#{@person.user_name}.jpg") %>
                <%= image_tag("profiles/default.gif") %>
