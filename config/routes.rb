@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   get "about/affiliates"
   get "about/focus"
   get "about/contact"
+  get "about/why"
   
   get "students/studenthub"
   get "students/tribeta"
@@ -39,6 +40,7 @@ Rails.application.routes.draw do
   get "students/constitution"
   get "students/bylaws"
   get "students/gsac"
+  get "students/contout"
 
   get "prospect/about"
   get "prospect/admission"
