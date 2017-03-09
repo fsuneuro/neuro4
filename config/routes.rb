@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get "events/eventhub"
   get "events/rushton"
   get "events/outreach"
@@ -49,6 +50,8 @@ Rails.application.routes.draw do
   get "prospect/prospecthub"
   get "prospect/faq"
 
+  get "support/supporthub"
+
   
   root to: 'homes#show'
 
@@ -66,6 +69,12 @@ Rails.application.routes.draw do
     resources :people do
       resources :pubs
     end
+
+    get "adminhub"
+  end
+
+  namespace :support do
+  get 'tickets/index'
   end
 
   get     '/sessions/new' => 'sessions#new',      as: :new_sessions
