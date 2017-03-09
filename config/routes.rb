@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "events/social"
   get "events/colloquium"
   get "events/rushton_reg"
+  get "events/rushton2017"
   get "events/rushton2016"
   get "events/rushton2015"
   get "events/rushton2014"
