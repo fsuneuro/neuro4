@@ -43,6 +43,7 @@ Rails.application.routes.draw do
   get "students/bylaws"
   get "students/gsac"
   get "students/contout"
+  get "students/gmg"
 
   get "prospect/about"
   get "prospect/admission"
