@@ -11,7 +11,7 @@ class SessionsController < SekretController
 
 		if user && user.authenticate(params[:password])
 			session[:user_id] = user.id
-			redirect_to sekret_people_path
+			redirect_to '/sekret/adminhub'
 		else
 			redirect_to new_sessions_path, alert: 'Unable to authenticate'
 		end

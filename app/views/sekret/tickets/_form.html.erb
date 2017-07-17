@@ -1,0 +1,55 @@
+<%= form_for [:sekret, ticket] do |f| %>
+
+	<% if @ticket.errors.any? %>
+		<div id="error_explanation">
+		    <h2><%= pluralize(@ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
+		 
+		    <ul>
+			    <% @ticket.errors.full_messages.each do |msg| %>
+			      <li><%= msg %></li>
+			    <% end %>
+		    </ul>
+		</div>
+	<% end %>
+
+	<fieldset>
+		<%= f.label :status %>  
+		<%= f.select :status, ['New', 'In Progress', 'Completed'] %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :name_of_Requestor %>  
+		<%= f.text_field :requestor_name %>
+	</fieldset>
+	<fieldset>
+		<%= f.label :lab_of_Requestor %>
+		<%= f.select :requestor_lab, [[" ", :null], ["D Fadool"], ["Arbeitman"], ["Bertram"], ["Bhide"], ["Blaber"], ["Bolanos"], ["Contreras"], ["Eckel"], ["J Fadool"], ["Feng"], ["Hammock"], ["Houpt"], ["Hull"], ["Hyson"], ["Johnson"], ["Kabbaj"], ["Kumar"], ["Lee"], ["Levenson"], ["Li"], ["Lyons"], ["Megraw"], ["Meredith"], ["Nowakowski"], ["Oclese"], ["Ren"], ["Spector"], ["Stanwood"], ["Trombley"], ["Y Wang"], ["Z Wang"], ["Wilber"], ["Williams"], ["Zhou"]] %>
+	</fieldset>
+	<fieldset>
+		<%= f.label :contact_email %>  
+		<%= f.text_field :contact %>  Please provide your best contact email.
+	</fieldset>
+	<fieldset>
+		<%= f.label :Type %>
+		<%= f.select :category, ['Administrative', 'Graphics', 'Graphics - Poster', 'Graphics - Photo', 'Graphics - Illustration', 'IT', 'IT - Web Services', 'IT - Email', 'IT - Hardware/Software'] %>  Pick the field that best matches your request.
+	</fieldset>
+	<fieldset>
+		<%= f.label :details %>
+		<%= f.text_area :request %> Please give us all the pertinent information concerning your request.
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :date_requested %>
+		<%= f.text_field :requested_by, data:{ provide:'datepicker' } %>  Date you would like to have this completed.
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :notes %>
+		<%= f.text_area :notes %> Please give us all the pertinent information concerning your request.
+	</fieldset>
+
+	
+
+	<%= f.submit %>
+<% end %>
+	

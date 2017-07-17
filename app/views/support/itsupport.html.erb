@@ -1,0 +1,21 @@
+<% provide(:title, "Technical Support") %>
+
+
+<div class="row">
+	<div id="hub_text" class="col-sm-12">
+		<div class="hub_header_image">
+			<%= image_tag ('banners/itsupport_b.jpg') %>
+			<h1> </h1>
+		</div>
+
+<div id="hub_left" class="col-sm-6 clearfix">
+		<ul>
+			<li><%= link_to 'Email', 'email', :class => 'email_link' %></li>	
+		</ul>
+	</div>
+	<div id="hub_right" class="col-sm-6 clearfix">
+		<ul>
+			<li><%= link_to 'Web Services', 'webservices', :class => 'webserve_link' %></li>	
+		</ul>
+	</div>
+</div>

@@ -11,6 +11,9 @@ gem 'mysql2', '~> 0.3.18'
 gem 'sass-rails'
 gem 'bootstrap-sass'
 
+# Datepicker for calendar dropdown in forms
+gem 'bootstrap-datepicker-rails'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

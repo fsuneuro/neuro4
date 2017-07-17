@@ -16,14 +16,12 @@ Rails.application.routes.draw do
   get "events/rushton2011"
   get "events/rushtonf2009"
   get "events/rushtons2009"
-  get 'events/', to: redirect('/events/eventhub')
 
   get "resource/resourcehub"
   get "resource/resresource"
   get "resource/links"
   get "resource/articles"
   get "resource/cores"
-  get 'resource/', to: redirect('/resource/resourcehub')
 
   get "about/abouthub"
   get "about/history"
@@ -31,7 +29,6 @@ Rails.application.routes.draw do
   get "about/focus"
   get "about/contact"
   get "about/why"
-  get 'about/', to: redirect('/about/abouthub')
   
   get "students/studenthub"
   get "students/tribeta"
@@ -46,8 +43,6 @@ Rails.application.routes.draw do
   get "students/bylaws"
   get "students/gsac"
   get "students/contout"
-  get "students/gmg"
-  get 'students/', to: redirect('/students/studenthub')
 
   get "prospect/about"
   get "prospect/admission"
@@ -55,20 +50,9 @@ Rails.application.routes.draw do
   get "prospect/curriculum"
   get "prospect/prospecthub"
   get "prospect/faq"
-  get 'prospect/', to: redirect('/prospect/prospecthub')
 
   get "support/supporthub"
-  get "support/itsupport"
-  get "support/graphics"
-  get "support/email"
-  get "support/illustration"
-  get "support/posters"
-  get "support/webservices"
-  get "support/newneuro"
-  get 'support/', to: redirect('/support/supporthub')
-  
 
-  resources :tickets, only: [:index, :new, :create]
   
   root to: 'homes#show'
 
@@ -86,13 +70,13 @@ Rails.application.routes.draw do
     resources :people do
       resources :pubs
     end
-    resources :tickets
+
     get "adminhub"
-    get '', to: redirect('/sekret/adminhub')
-    
   end
 
-  
+  namespace :support do
+  get 'tickets/index'
+  end
 
   get     '/sessions/new' => 'sessions#new',      as: :new_sessions
   post    '/sessions'     => 'sessions#create',   as: :session 
@@ -102,5 +86,59 @@ Rails.application.routes.draw do
   get ':position/:user_name', to: 'people#show', as: 'friendly_person'
 
 
+
+  # The priority is based upon order of creation: first created -> highest priority.
+  # See how all your routes lay out with "rake routes".
+
+  # You can have the root of your site routed with "root"
+  # root 'welcome#index'
+
+  # Example of regular route:
+  #   get 'products/:id' => 'catalog#view'
+
+  # Example of named route that can be invoked with purchase_url(id: product.id)
+  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+
+  # Example resource route (maps HTTP verbs to controller actions automatically):
+  #   resources :products
+
+  # Example resource route with options:
+  #   resources :products do
+  #     member do
+  #       get 'short'
+  #       post 'toggle'
+  #     end
+  #
+  #     collection do
+  #       get 'sold'
+  #     end
+  #   end
+
+  # Example resource route with sub-resources:
+  #   resources :products do
+  #     resources :comments, :sales
+  #     resource :seller
+  #   end
+
+  # Example resource route with more complex sub-resources:
+  #   resources :products do
+  #     resources :comments
+  #     resources :sales do
+  #       get 'recent', on: :collection
+  #     end
+  #   end
+
+  # Example resource route with concerns:
+  #   concern :toggleable do
+  #     post 'toggle'
+  #   end
+  #   resources :posts, concerns: :toggleable
+  #   resources :photos, concerns: :toggleable
+
+  # Example resource route within a namespace:
+  #   namespace :admin do
+  #     # Directs /admin/products/* to Admin::ProductsController
+  #     # (app/controllers/admin/products_controller.rb)
+  #     resources :products
+  #   end
 end
-  

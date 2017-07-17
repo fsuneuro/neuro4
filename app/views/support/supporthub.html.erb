@@ -1,0 +1,24 @@
+<% provide(:title, "Support Hub") %>
+
+
+<div class="row">
+	<div id="hub_text" class="col-sm-12">
+		<div class="hub_header_image">
+			<%= image_tag ('banners/ticket_b.jpg') %>
+			<h1> </h1>
+		</div>
+
+<div id="hub_left" class="col-sm-6 clearfix">
+		<ul>
+			<li><%= link_to 'Technical Support', 'itsupport', :class => 'support_link' %></li>	
+		</ul>
+		<ul>
+			<li><%= link_to 'Graphics Lab', 'graphics', :class => 'support_link' %></li>	
+		</ul>
+	</div>
+	<div id="hub_right" class="col-sm-6 clearfix">
+		<ul>
+			<li><%= link_to 'Open Ticket', '/tickets/new', :class => 'opent_link' %></li>
+		</ul>
+	</div>
+</div>

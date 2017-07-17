@@ -1,0 +1,46 @@
+<%= form_for(ticket) do |f| %>
+
+	<% if @ticket.errors.any? %>
+		<div id="error_explanation">
+		    <h2><%= pluralize(@ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
+		 
+		    <ul>
+			    <% @ticket.errors.full_messages.each do |msg| %>
+			      <li><%= msg %></li>
+			    <% end %>
+		    </ul>
+		</div>
+	<% end %>
+
+
+	<fieldset class="hub_para">
+		<%= f.label :name_of_Requestor %>  
+		<%= f.text_field :requestor_name %>
+	</fieldset>
+	<fieldset class="hub_para">
+		<%= f.label :lab_of_Requestor %>
+		<%= f.select :requestor_lab, [[" ", :null], ["Arbeitman"], ["Bertram"], ["Bhide"], ["Blaber"], ["Bolanos"], ["Contreras"], ["Eckel"], ["D Fadool"], ["J Fadool"], ["Feng"], ["Hammock"], ["Houpt"], ["Hull"], ["Hyson"], ["Johnson"], ["Kabbaj"], ["Kumar"], ["Lee"], ["Levenson"], ["Li"], ["Lyons"], ["Megraw"], ["Meredith"], ["Nowakowski"], ["Oclese"], ["Ren"], ["Spector"], ["Stanwood"], ["Trombley"], ["Y Wang"], ["Z Wang"], ["Wilber"], ["Williams"], ["Zhou"]] %>
+	</fieldset>
+	<fieldset class="hub_para">
+		<%= f.label :contact_email %>  
+		<%= f.text_field :contact %>  Please provide your best contact email.
+	</fieldset>
+	<fieldset class="hub_para">
+		<%= f.label :Type %>
+		<%= f.select :category, ['Administrative', 'Administrative - New Personnel', 'Graphics', 'Graphics - Poster', 'Graphics - Photo', 'Graphics - Illustration', 'IT', 'IT - Web Services', 'IT - Email', 'IT - Hardware/Software'] %>  Pick the field that best matches your request.
+	</fieldset>
+	<fieldset class="hub_para">
+		<%= f.label :details %>
+		<%= f.text_area :request %> Provide pertinent information concerning your request.
+	</fieldset>
+
+	<fieldset class="hub_para">
+		<%= f.label :needed_by %>
+		<%= f.text_field :requested_by, data:{ provide:'datepicker' } %> 
+	</fieldset>
+
+	
+
+	<%= f.submit %>
+<% end %>
+	

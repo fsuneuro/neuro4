@@ -1,0 +1,48 @@
+<% provide(:title, "Ticket System") %>
+
+
+<table class="people table-striped">
+	
+	<tbody>
+		<% @tickets.each do |ticket| %>
+		  <tr class="people_row">
+		  	<td>
+		  		<div class="portrait">
+		  			
+		  		</div>
+		  	</td>
+		  	<td class="names">
+		  		<div class="inner">
+		  			<p><%= link_to sekret_ticket_path(ticket) do %>
+  						<strong><%= ticket.category %></strong>
+					<% end %></p>
+		  				
+		  		</div>
+		  	</td>
+
+		  	<td class="stats">
+		  		<div class="inner">
+		  			<p><%= ticket.requestor_name %></p>
+		  			<p><%= ticket.requestor_lab %></p>
+		  			<p><%= ticket.contact %></p>
+		  		</div>
+		  	</td>
+
+		  	<td class="mail">
+		  		<div class="inner">
+		  			<p><%= ticket.requested_by %></p>
+					
+		  			<p> </p>
+		  			<p><%= link_to "Edit", edit_sekret_ticket_path(ticket) %> |
+		  			 <%= link_to "Delete", sekret_ticket_path(ticket),
+		  			 method: :delete,
+		  			 data: { confirm: "Are you sure?" } %></p>
+
+		  		</div>
+		  	</td>
+
+		  </tr>
+		<% end %>
+	</tbody>
+</table>
+

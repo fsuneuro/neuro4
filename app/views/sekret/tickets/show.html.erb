@@ -1,0 +1,80 @@
+<%= provide(:title,  @ticket.requestor_lab) %>
+
+
+
+<div id="main_con" class="container">
+
+<div class="row">
+
+	<div>
+		<h4>Ticket status is currently: <%= @ticket.status %></h4>
+	</div>
+
+   <div id="person_left_show" class="col-sm-6 col-md-7">
+   	   <div class="profile">
+   			<h2><%= @ticket.requestor_name %></h2>
+		<h4><%= @ticket.requestor_lab %></h4>
+		<dl>
+			<dd><%= @ticket.contact %></dd>
+			<dd><%= @ticket.category %></dd>
+		</dl>
+   	   </div>
+   </div>
+
+   <div id="person_right_show" class="col-sm-6 col-md-5 profile_info">
+   		<h1> </h1>
+		<dl>
+			<dd>Date Created: <%= @ticket.created_at %></dd>
+			<dd>Last Updated: <%= @ticket.updated_at %></dd>
+
+		</dl>
+   </div>
+   
+   <p> </p>
+
+   <div id="person_right_show" class="col-sm-6 col-md-5 profile_info">
+   		
+   </div>
+  </div>
+
+  <div class="row">
+  		<div class="col-sm-6 profile_desc">
+  			<p> </p>
+  			<dl>
+				<dt>Request Details</dt>
+				<dd><%= @ticket.request %></dd>
+
+				<dt>Notes</dt>
+				<dd><%= @ticket.notes %></dd>
+
+			</dl>
+
+  		</div>
+
+  		
+
+  </div>
+
+
+<div>
+	<%= link_to "Edit", edit_sekret_ticket_path(@ticket) %> |
+	<%= link_to "Show All", sekret_tickets_path %>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
