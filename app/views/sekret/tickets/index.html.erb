@@ -1,5 +1,16 @@
 <% provide(:title, "Ticket System") %>
 
+<div class="filter_div">
+	
+	<div class="filter btn btn-default btn-directory active"><%= link_to "New entry", new_sekret_ticket_path %></div> ||| 
+	<div class="filter btn btn-default btn-directory active">
+	  <% if current_user.present? %>
+        <%= link_to " Sign Out", sessions_path, method: :delete %>
+      <% end %>
+	</div>
+
+</div>
+
 
 <table class="people table-striped">
 	

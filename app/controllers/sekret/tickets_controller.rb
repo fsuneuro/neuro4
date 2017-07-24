@@ -2,6 +2,12 @@ class Sekret::TicketsController < SekretController
 
 	def index
 		@tickets = Ticket.all
+
+		if params[:filter_by]
+    		@people = Ticket.where(:category => params[:filter_by])
+  		else
+    		@people = Ticket.all
+  		end
 	end
 
 	def show
@@ -17,7 +23,7 @@ class Sekret::TicketsController < SekretController
 		@ticket = Ticket.all
 
 		if @ticket.save
-			flash[:notice] = "Article created successfully!"
+			flash[:notice] = "Ticket created successfully!"
 			redirect_to sekret_ticket_path(@ticket)
 		else
 			render :new, status: :unprocessable_entity
@@ -41,7 +47,7 @@ class Sekret::TicketsController < SekretController
 	def destroy
 		ticket = Ticket.find(params[:id])
 		ticket.destroy
-		redirect_to 'adminhub'
+		redirect_to sekret_ticket_path
 	end
 
 
