@@ -4,9 +4,9 @@ class Sekret::TicketsController < SekretController
 		@tickets = Ticket.all
 
 		if params[:filter_by]
-    		@people = Ticket.where(:category => params[:filter_by])
+    		@tickets = Ticket.where(:category => params[:filter_by])
   		else
-    		@people = Ticket.all
+    		@tickets = Ticket.all
   		end
 	end
 
@@ -20,7 +20,7 @@ class Sekret::TicketsController < SekretController
 
 	def create
 		
-		@ticket = Ticket.all
+		@ticket = Ticket.new(ticket_params)
 
 		if @ticket.save
 			flash[:notice] = "Ticket created successfully!"
@@ -57,7 +57,7 @@ class Sekret::TicketsController < SekretController
 	def ticket_params
 		params.require(:ticket).permit(
 			:type, :requestor_name, :requestor_lab, :contact, :request,
-			 :requested_by, :subtype, :status, :notes) 
+			 :requested_by, :subtype, :status, :notes, :category) 
 	end
 
 

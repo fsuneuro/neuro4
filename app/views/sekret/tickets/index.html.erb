@@ -1,7 +1,10 @@
 <% provide(:title, "Ticket System") %>
 
 <div class="filter_div">
-	
+	<div class="filter btn btn-default btn-directory active"><%= link_to "Full Listing", sekret_tickets_path %></div>
+	<div class="filter btn btn-default btn-directory active"><%= link_to "Admin", sekret_tickets_path(:filter_by => :Administrative), {:method => :get} %></div>
+	<div class="filter btn btn-default btn-directory active"><%= link_to "Graphics", sekret_tickets_path(:filter_by => [:Graphics, :'Graphics - Poster', :'Graphics - Photo', :'Graphics - Illustration']), {:method => :get} %></div>
+	<div class="filter btn btn-default btn-directory active"><%= link_to "IT", sekret_tickets_path(:filter_by => [:IT, :'IT - Web Services', :'IT - Email', :'IT - Hardware/Software']), {:method => :get} %></div> ||| 
 	<div class="filter btn btn-default btn-directory active"><%= link_to "New entry", new_sekret_ticket_path %></div> ||| 
 	<div class="filter btn btn-default btn-directory active">
 	  <% if current_user.present? %>
@@ -42,8 +45,8 @@
 		  	<td class="mail">
 		  		<div class="inner">
 		  			<p><%= ticket.requested_by %></p>
-					
-		  			<p> </p>
+		  			<p><font color="ff0000"><%= ticket.status %></font></p>
+					<p> </p>
 		  			<p><%= link_to "Edit", edit_sekret_ticket_path(ticket) %> |
 		  			 <%= link_to "Delete", sekret_ticket_path(ticket),
 		  			 method: :delete,
