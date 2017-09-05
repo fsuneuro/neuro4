@@ -47,6 +47,7 @@ Rails.application.routes.draw do
   get "students/gsac"
   get "students/contout"
   get "students/gmg"
+  get "students/newgrad"
   get 'students/', to: redirect('/students/studenthub')
 
   get "prospect/about"
