@@ -14,5 +14,8 @@ class ResourceController < ApplicationController
 
   def cores
   end
+
+  def openings
+  end
   
 end
