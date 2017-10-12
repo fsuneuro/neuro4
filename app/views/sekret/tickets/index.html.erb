@@ -45,7 +45,13 @@
 		  	<td class="mail">
 		  		<div class="inner">
 		  			<p><%= ticket.requested_by %></p>
-		  			<p><font color="ff0000"><%= ticket.status %></font></p>
+		  			<% if ticket.status == 'New' %> 
+					      <p><font color="f0150a"><%= ticket.status %></font></p>           
+					<% elsif ticket.status == 'In Progress' %>
+					      <p><font color="fa08c7"><%= ticket.status %></font></p>
+					<% elsif ticket.status == 'Completed' %>
+					      <p><font color="c7c7c7"><%= ticket.status %></font></p>
+					<% end %>
 					<p> </p>
 		  			<p><%= link_to "Edit", edit_sekret_ticket_path(ticket) %> |
 		  			 <%= link_to "Delete", sekret_ticket_path(ticket),
