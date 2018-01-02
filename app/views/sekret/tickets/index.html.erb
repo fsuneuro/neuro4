@@ -15,54 +15,175 @@
 </div>
 
 
-<table class="people table-striped">
+
+		
+<h4>New</h4>
+	<table class="people table-striped">
 	
 	<tbody>
-		<% @tickets.each do |ticket| %>
-		  <tr class="people_row">
-		  	<td>
-		  		<div class="portrait">
-		  			
-		  		</div>
-		  	</td>
-		  	<td class="names">
-		  		<div class="inner">
-		  			<p><%= link_to sekret_ticket_path(ticket) do %>
-  						<strong><%= ticket.category %></strong>
-					<% end %></p>
-		  				
-		  		</div>
-		  	</td>
+	<% if @tickets.any? %>
+         <% @tickets.each do |ticket| %>
+            <% if ticket.status == 'New' %>
+			  <tr class="people_row">
+			  	<td>
+			  		<div class="portrait">
+			  			
+			  		</div>
+			  	</td>
+			  	<td class="names">
+			  		<div class="inner">
+			  			<p><%= link_to sekret_ticket_path(ticket) do %>
+	  						<strong><%= ticket.category %></strong>
+						<% end %></p>
+			  				
+			  		</div>
+			  	</td>
 
-		  	<td class="stats">
-		  		<div class="inner">
-		  			<p><%= ticket.requestor_name %></p>
-		  			<p><%= ticket.requestor_lab %></p>
-		  			<p><%= ticket.contact %></p>
-		  		</div>
-		  	</td>
+			  	<td class="stats">
+			  		<div class="inner">
+			  			<p><%= ticket.requestor_name %></p>
+			  			<p><%= ticket.requestor_lab %></p>
+			  			<p><%= ticket.contact %></p>
+			  		</div>
+			  	</td>
 
-		  	<td class="mail">
-		  		<div class="inner">
-		  			<p><%= ticket.requested_by %></p>
-		  			<% if ticket.status == 'New' %> 
-					      <p><font color="f0150a"><%= ticket.status %></font></p>           
-					<% elsif ticket.status == 'In Progress' %>
-					      <p><font color="fa08c7"><%= ticket.status %></font></p>
-					<% elsif ticket.status == 'Completed' %>
-					      <p><font color="c7c7c7"><%= ticket.status %></font></p>
-					<% end %>
-					<p> </p>
-		  			<p><%= link_to "Edit", edit_sekret_ticket_path(ticket) %> |
-		  			 <%= link_to "Delete", sekret_ticket_path(ticket),
-		  			 method: :delete,
-		  			 data: { confirm: "Are you sure?" } %></p>
+			  	<td class="mail">
+			  		<div class="inner">
+			  			<p><%= ticket.requested_by %></p>
+			  			<% if ticket.status == 'New' %> 
+						      <p><font color="f0150a"><%= ticket.status %></font></p>           
+						<% elsif ticket.status == 'In Progress' %>
+						      <p><font color="fa08c7"><%= ticket.status %></font></p>
+						<% elsif ticket.status == 'Completed' %>
+						      <p><font color="c7c7c7"><%= ticket.status %></font></p>
+						<% end %>
+						<p> </p>
+			  			<p><%= link_to "Edit", edit_sekret_ticket_path(ticket) %> |
+			  			 <%= link_to "Delete", sekret_ticket_path(ticket),
+			  			 method: :delete,
+			  			 data: { confirm: "Are you sure?" } %></p>
 
-		  		</div>
-		  	</td>
-
-		  </tr>
+			  		</div>
+			  	</td>
+			</tr>
+				
+			<% end %>	
 		<% end %>
+	<% end %>
+
+	</tbody>
+			</table>
+
+<h4>In Progress</h4>
+	<table class="people table-striped">
+	
+	<tbody>
+	<% if @tickets.any? %>
+         <% @tickets.each do |ticket| %>
+            <% if ticket.status == 'In Progress' %>
+			  <tr class="people_row">
+			  	<td>
+			  		<div class="portrait">
+			  			
+			  		</div>
+			  	</td>
+			  	<td class="names">
+			  		<div class="inner">
+			  			<p><%= link_to sekret_ticket_path(ticket) do %>
+	  						<strong><%= ticket.category %></strong>
+						<% end %></p>
+			  				
+			  		</div>
+			  	</td>
+
+			  	<td class="stats">
+			  		<div class="inner">
+			  			<p><%= ticket.requestor_name %></p>
+			  			<p><%= ticket.requestor_lab %></p>
+			  			<p><%= ticket.contact %></p>
+			  		</div>
+			  	</td>
+
+			  	<td class="mail">
+			  		<div class="inner">
+			  			<p><%= ticket.requested_by %></p>
+			  			<% if ticket.status == 'New' %> 
+						      <p><font color="f0150a"><%= ticket.status %></font></p>           
+						<% elsif ticket.status == 'In Progress' %>
+						      <p><font color="fa08c7"><%= ticket.status %></font></p>
+						<% elsif ticket.status == 'Completed' %>
+						      <p><font color="c7c7c7"><%= ticket.status %></font></p>
+						<% end %>
+						<p> </p>
+			  			<p><%= link_to "Edit", edit_sekret_ticket_path(ticket) %> |
+			  			 <%= link_to "Delete", sekret_ticket_path(ticket),
+			  			 method: :delete,
+			  			 data: { confirm: "Are you sure?" } %></p>
+
+			  		</div>
+			  	</td>
+			</tr>
+				
+			<% end %>
+		<% end %>
+	<% end %>
+	</tbody>
+			</table>
+
+<h4>Completed</h4>
+	<table class="people table-striped">
+	
+	<tbody>
+	<% if @tickets.any? %>
+         <% @tickets.each do |ticket| %>
+            <% if ticket.status == 'Completed' %>
+			  <tr class="people_row">
+			  	<td>
+			  		<div class="portrait">
+			  			
+			  		</div>
+			  	</td>
+			  	<td class="names">
+			  		<div class="inner">
+			  			<p><%= link_to sekret_ticket_path(ticket) do %>
+	  						<strong><%= ticket.category %></strong>
+						<% end %></p>
+			  				
+			  		</div>
+			  	</td>
+
+			  	<td class="stats">
+			  		<div class="inner">
+			  			<p><%= ticket.requestor_name %></p>
+			  			<p><%= ticket.requestor_lab %></p>
+			  			<p><%= ticket.contact %></p>
+			  		</div>
+			  	</td>
+
+			  	<td class="mail">
+			  		<div class="inner">
+			  			<p><%= ticket.requested_by %></p>
+			  			<% if ticket.status == 'New' %> 
+						      <p><font color="f0150a"><%= ticket.status %></font></p>           
+						<% elsif ticket.status == 'In Progress' %>
+						      <p><font color="fa08c7"><%= ticket.status %></font></p>
+						<% elsif ticket.status == 'Completed' %>
+						      <p><font color="c7c7c7"><%= ticket.status %></font></p>
+						<% end %>
+						<p> </p>
+			  			<p><%= link_to "Edit", edit_sekret_ticket_path(ticket) %> |
+			  			 <%= link_to "Delete", sekret_ticket_path(ticket),
+			  			 method: :delete,
+			  			 data: { confirm: "Are you sure?" } %></p>
+
+			  		</div>
+			  	</td>
+			</tr>
+				
+			<% end %>
+		<% end %>
+	<% end %>
+
 	</tbody>
 </table>
 
