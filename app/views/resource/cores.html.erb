@@ -2,87 +2,121 @@
 
 <div class="hub_wrap">
 	<div id="hub_text">
-		<h2>Department of Biological Sciences Cores</h2>
+
+		<div class="panel-group" id="accordion">
+
+		  	<div class="panel panel-default">
+			    <div class="panel-heading">
+					<h2 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Department of Biological Sciences Cores</a>
+					</h2>
+				</div>
+
+				<div id="collapse1" class="panel-collapse collapse in">
+	      			<div class="panel-body">
 
 
-		<h3><%= link_to "Analytical Facilities", 'http://www.bio.fsu.edu/analytical.php', :target => "_blank" %></h3>
-		<p>Services include various HPLC analyses.  There is also preparative equipment and gel quantification equipment.</p>
+						<h3><%= link_to "Analytical Facilities", 'http://www.bio.fsu.edu/analytical.php', :target => "_blank" %></h3>
+						<p>Services include various HPLC analyses.  There is also preparative equipment and gel quantification equipment.</p>
+						
+
+						<h3><%= link_to "DNA sequencing Facility", 'http://www.bio.fsu.edu/dna_sequencing.php', :target => "_blank" %></h3>
+						<p>The facility offers sequencing services on Applied Biosystems 3730 Genetic Analyzer and Next-generation sequencing with Illumina MiSeq.</p>
+						
+
+						<h3><%= link_to "Hybridoma Core Facility", 'http://www.bio.fsu.edu/hybridoma.php', :target => "_blank" %></h3>
+						<p>This facility offers expertise and assistance in monoclonal antibody production.</p>
+
+
+						<h3><%= link_to "Molecular Cloning Facility", 'http://www.bio.fsu.edu/mol_cloning.php', :target => "_blank" %></h3>
+						<p>This facility provides assistance in the design and implementation of molecular biology techniques.</p>
+
+
+						<h3><%= link_to "Institute of Molecular Biophysics
+							Protein Expression Facility", 'http://biophysics.fsu.edu/facilities/protein-expression-facility/', :target => "_blank" %></h3>
+						<p>This core facilitates the large scale expression of recombinant progestin in eukaryotic cells.  They have a WAVE bioreactor and a BelloCell bioreactor.</p>
+
+						<h3><%= link_to "Center for Genomics and Personalized Medicine", 'http://genomics.fsu.edu/', :target => "_blank" %></h3>
+						<p>Will provide assistance in genomic-scale data analyses, experimental design and implementation.</p>
+					</div>
+				</div>
+		  	</div>
 		
 
-		<h3><%= link_to "DNA sequencing Facility", 'http://www.bio.fsu.edu/dna_sequencing.php', :target => "_blank" %></h3>
-		<p>The facility offers sequencing services on Applied Biosystems 3730 Genetic Analyzer and Next-generation sequencing with Illumina MiSeq.</p>
-		
+			<div class="panel panel-default">
+	    		<div class="panel-heading">
+					<h2 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">College of Medicine Cores</a>
+					</h2>
+				</div>
 
-		<h3><%= link_to "Hybridoma Core Facility", 'http://www.bio.fsu.edu/hybridoma.php', :target => "_blank" %></h3>
-		<p>This facility offers expertise and assistance in monoclonal antibody production.</p>
+				<div id="collapse2" class="panel-collapse collapse">
+	      			<div class="panel-body">
 
+						<h3><%= link_to "Translational Science Core", 'http://med.fsu.edu/?page=translationalLab.home', :target => "_blank" %></h3>
+						<p>This core houses several instruments for proteomic and nucleic acid analyses:
+							<ul>
+								<li>LTQ</li>
+								<li>MALDI-TOF</li>
+								<li>Off-Gel Fractionator</li>
+								<li>BioAnalyzer</li>
+								<li>Synapt G2 HDMS</li>
+								<li>Orbitrap</li>
+								<li>Xevo TQS</li>
+								<li>Illumina HiSeq 2500.</li>
+							</ul>
+						</p>
 
-		<h3><%= link_to "Molecular Cloning Facility", 'http://www.bio.fsu.edu/mol_cloning.php', :target => "_blank" %></h3>
-		<p>This facility provides assistance in the design and implementation of molecular biology techniques.</p>
+						<h3><%= link_to "Magnetic Resonance Imaging Facility", 'https://mri.fsu.edu/', :target => "_blank" %></h3>
+						<p>MRI center is a research-dedicated space that includes a 3T Siemens Prisma (whole-body) scanner, an MR-compatible Brain Products system for EEG and psychophysiological measures, eye tracker, mock scanner, and a MagPro X100 equipped with Localite TMS Navigator for brain stimulation.</p>
+					</div>
+				</div>
+			</div>
 
+			<div class="panel panel-default">
+    			<div class="panel-heading">
+    				<h2 class="panel-title">
+        				<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Department of Psychology Cores</a>
+    				</h2>
+    			</div>
 
-		<h3><%= link_to "Institute of Molecular Biophysics
-			Protein Expression Facility", 'http://biophysics.fsu.edu/facilities/protein-expression-facility/', :target => "_blank" %></h3>
-		<p>This core facilitates the large scale expression of recombinant progestin in eukaryotic cells.  They have a WAVE bioreactor and a BelloCell bioreactor.</p>
+    			<div id="collapse3" class="panel-collapse collapse">
+      				<div class="panel-body">
 
-		<h3><%= link_to "Center for Genomics and Personalized Medicine", 'http://genomics.fsu.edu/', :target => "_blank" %></h3>
-		<p>Will provide assistance in genomic-scale data analyses, experimental design and implementation.</p>
+						<h3><%= link_to "Histology/Molecular Laboratories", 'https://psy.fsu.edu/php/research/research.php?_tr=2_3', :target => "_blank" %></h3>
 
-
-		<h2>College of Medicine Cores</h2>
-
-		<h3><%= link_to "Translational Science Core", 'http://med.fsu.edu/?page=translationalLab.home', :target => "_blank" %></h3>
-		<p>This core houses several instruments for proteomic and nucleic acid analyses:
-			<ul>
-				<li>LTQ</li>
-				<li>MALDI-TOF</li>
-				<li>Off-Gel Fractionator</li>
-				<li>BioAnalyzer</li>
-				<li>Synapt G2 HDMS</li>
-				<li>Orbitrap</li>
-				<li>Xevo TQS</li>
-				<li>Illumina HiSeq 2500.</li>
-			</ul>
-		</p>
-
-		<h3><%= link_to "Magnetic Resonance Imaging Facility", 'https://mri.fsu.edu/', :target => "_blank" %></h3>
-		<p>MRI center is a research-dedicated space that includes a 3T Siemens Prisma (whole-body) scanner, an MR-compatible Brain Products system for EEG and psychophysiological measures, eye tracker, mock scanner, and a MagPro X100 equipped with Localite TMS Navigator for brain stimulation.</p>
-
-
-
-		<h2>Department of Psychology Cores</h2>
-
-		<h3><%= link_to "Histology/Molecular Laboratories", 'https://psy.fsu.edu/php/research/research.php?_tr=2_3', :target => "_blank" %></h3>
-
-		<p>The major equipment that this Core houses includes:
-			<ul>
-				<li>Cryostat</li>
-				<li>Microtome</li>
-				<li>Vibratome</li>
-				<li>Ultra-microtome</li>
-				<li>Nanodrop</li>
-				<li>Biorad thermal cycler</li>
-				<li>Scintillation counter</li>
-				<li>Gamma counter</li>
-				<li>Fluorescence and Stereo Investigator equipped microscope</li>
-				<li>Confocal Microscope (CLARITY enabled)</li>
-				<li>X-ray film processor.</li>
-			</ul>
-		</p>
+						<p>The major equipment that this Core houses includes:
+							<ul>
+								<li>Cryostat</li>
+								<li>Microtome</li>
+								<li>Vibratome</li>
+								<li>Ultra-microtome</li>
+								<li>Nanodrop</li>
+								<li>Biorad thermal cycler</li>
+								<li>Scintillation counter</li>
+								<li>Gamma counter</li>
+								<li>Fluorescence and Stereo Investigator equipped microscope</li>
+								<li>Confocal Microscope (CLARITY enabled)</li>
+								<li>X-ray film processor.</li>
+							</ul>
+						</p>
 
 
-
-		<h3><%= link_to "Electronic Shop", 'https://psy.fsu.edu/php/research/research.php?_tr=2_4', :target => "_blank" %></h3>
-		<p>Will help produce specialized equipment for experiments.</p>
-
-
-		<h3><%= link_to "Instrument/Machine Shop", 'https://psy.fsu.edu/php/research/research.php?_tr=2_5', :target => "_blank" %></h3>
-		<p>Will assist in the fabrication of equipment.</p>
+						<h3><%= link_to "Electronic Shop", 'https://psy.fsu.edu/php/research/research.php?_tr=2_4', :target => "_blank" %></h3>
+						<p>Will help produce specialized equipment for experiments.</p>
 
 
-		<h3><%= link_to "Graphics Office", 'https://psy.fsu.edu/php/research/research.php?_tr=2_6', :target => "_blank" %></h3> 
-		<p>Will provide assistance in the preparation of illustrations and printed materials.</p>
+						<h3><%= link_to "Instrument/Machine Shop", 'https://psy.fsu.edu/php/research/research.php?_tr=2_5', :target => "_blank" %></h3>
+						<p>Will assist in the fabrication of equipment.</p>
 
 
+						<h3><%= link_to "Graphics Office", 'https://psy.fsu.edu/php/research/research.php?_tr=2_6', :target => "_blank" %></h3> 
+						<p>Will provide assistance in the preparation of illustrations and printed materials.</p>
 
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
 </div>
