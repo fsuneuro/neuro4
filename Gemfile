@@ -23,8 +23,6 @@ gem 'coffee-rails'
 # Use Flexslider gem for frontpage carosel.
 gem 'flexslider'
 
-# Use paperclip gem for Image handling in ActiveRecord
-gem 'paperclip', '~> 4.3.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

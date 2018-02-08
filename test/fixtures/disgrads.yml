@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fname: MyString
+  lname: MyString
+  year: 
+  mprof: MyString
+  current_location: MyString
+  link: MyString
+
+two:
+  fname: MyString
+  lname: MyString
+  year: 
+  mprof: MyString
+  current_location: MyString
+  link: MyString

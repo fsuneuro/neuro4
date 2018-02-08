@@ -91,6 +91,7 @@ Rails.application.routes.draw do
     resources :tickets
     get "adminhub"
     get '', to: redirect('/sekret/adminhub')
+    resources :disgrads
     
   end
 

@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170607183427) do
+ActiveRecord::Schema.define(version: 20180205160940) do
+
+  create_table "disgrads", force: :cascade do |t|
+    t.string   "fname",            limit: 255
+    t.string   "lname",            limit: 255
+    t.integer  "year",             limit: 4
+    t.string   "mprof",            limit: 255
+    t.string   "current_location", limit: 255
+    t.string   "link",             limit: 255
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
 
   create_table "people", force: :cascade do |t|
     t.string   "fname",      limit: 255

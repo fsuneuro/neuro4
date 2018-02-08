@@ -1,0 +1,48 @@
+<%= form_for [:sekret, disgrad] do |f| %>
+
+	<% if @disgrad.errors.any? %>
+		<div id="error_explanation">
+		    <h2><%= pluralize(@disgrad.errors.count, "error") %> prohibited this person from being saved:</h2>
+		 
+		    <ul>
+			    <% @disgrad.errors.full_messages.each do |msg| %>
+			      <li><%= msg %></li>
+			    <% end %>
+		    </ul>
+		</div>
+	<% end %>
+
+	
+	<fieldset>
+		<%= f.label :First_Name %>
+		<%= f.text_field :fname %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :last_name %>
+		<%= f.text_field :lname %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :year %>
+		<%= f.text_field :year %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :current_location %>
+		<%= f.text_field :current_location %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :Major_Professor %>
+		<%= f.text_field :mprof %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :link %>
+		<%= f.text_field :link %>
+	</fieldset>
+
+
+	<%= f.submit %>
+<% end %>
