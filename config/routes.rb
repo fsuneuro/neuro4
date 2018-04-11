@@ -56,6 +56,7 @@ Rails.application.routes.draw do
   get "prospect/finaid"
   get "prospect/curriculum"
   get "prospect/prospecthub"
+  get "prospect/prospecthub2"
   get "prospect/faq"
   get 'prospect/', to: redirect('/prospect/prospecthub')
 
@@ -68,6 +69,25 @@ Rails.application.routes.draw do
   get "support/webservices"
   get "support/newneuro"
   get 'support/', to: redirect('/support/supporthub')
+
+  get "ug/ughub"
+  get "ug/admission"
+  get "ug/advising"
+  get "ug/courses"
+  get "ug/majors"
+  get "ug/pathways"
+  get "ug/studentorg"
+  get "ug/whatis"
+  get 'ug/', to: redirect('/ug/ughub')
+
+  get "gr/grhub"
+  get 'gr/', to: redirect('/gr/grhub')
+  get "gr/about"
+  get "gr/admission"
+  get "gr/curriculum"
+  get "gr/faq"
+  get "gr/finaid"
+  get "gr/grants"
   
 
   resources :tickets, only: [:index, :new, :create]

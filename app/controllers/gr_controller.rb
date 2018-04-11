@@ -1,4 +1,4 @@
-class ProspectController < ApplicationController
+class GrController < ApplicationController
 
   def about
   end
@@ -12,10 +12,7 @@ class ProspectController < ApplicationController
   def curriculum
   end
 
-  def prospecthub
-  end
-
-  def prospecthub2
+  def grhub
   end
 
   def faq
