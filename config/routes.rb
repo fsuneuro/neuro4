@@ -51,13 +51,7 @@ Rails.application.routes.draw do
   get "students/newgrad"
   get 'students/', to: redirect('/students/studenthub')
 
-  get "prospect/about"
-  get "prospect/admission"
-  get "prospect/finaid"
-  get "prospect/curriculum"
   get "prospect/prospecthub"
-  get "prospect/prospecthub2"
-  get "prospect/faq"
   get 'prospect/', to: redirect('/prospect/prospecthub')
 
   get "support/supporthub"
