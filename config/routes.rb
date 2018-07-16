@@ -50,6 +50,12 @@ Rails.application.routes.draw do
   get "students/gmg"
   get "students/newgrad"
   get 'students/', to: redirect('/students/studenthub')
+  get "students/studenthub2"
+  get "students/sgrhub"
+  get "students/sughub"
+  get "students/resopp"
+  get "students/studgroups"
+  get "students/smedia"
 
   get "prospect/prospecthub"
   get 'prospect/', to: redirect('/prospect/prospecthub')

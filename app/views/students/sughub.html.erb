@@ -1,0 +1,30 @@
+<% provide(:title, "Current Undergraduate Students") %>
+
+<div class="row">
+	<div id="hub_text" class="col-sm-12">
+		<div class="hub_header_image">
+			<%= image_tag ('banners/students_b.jpg') %>
+		</div>
+		<h1> </h1>
+		<h3 class="hub_para">For Graduate Students</h3>
+	</div>
+
+	
+
+	<div id="hub_left" class="col-sm-6 clearfix">
+		<ul>
+			<li><%= link_to 'Advising', '/ug/advising', :class => 'advise_link' %></li>
+			<li><%= link_to 'Course Sequence', '/ug/courses', :class => 'courses_link' %></li>
+			<li><%= link_to 'Career Pathways', '/ug/pathways', :class => 'pathways_link' %></li>
+			<li><%= link_to 'Research Opportunities', '/students/resopp', :class => 'pathways_link' %></li>
+		</ul>
+	</div>
+	<div id="hub_right" class="col-sm-6 clearfix">
+		<ul>
+			<li><%= link_to 'Outreach', '/students/outreach', :class => 'out_link' %></li>
+			<li><%= link_to 'Student Groups', '/students/studgroups', :class => 'gmgs_link' %></li>
+			<li><%= link_to 'Social Media', '/students/smedia', :class => 'nsres_link' %></li>
+		</ul>
+	</div>
+
+	
