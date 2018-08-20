@@ -68,6 +68,8 @@ Rails.application.routes.draw do
   get "support/posters"
   get "support/webservices"
   get "support/newneuro"
+  get "support/newgrad"
+  get "support/newfac"
   get 'support/', to: redirect('/support/supporthub')
 
   get "ug/ughub"
