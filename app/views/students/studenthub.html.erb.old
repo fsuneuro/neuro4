@@ -1,4 +1,4 @@
-<% provide(:title, "Current Graduate Students") %>
+<% provide(:title, "Current Students") %>
 
 <div class="row">
 	<div id="hub_text" class="col-sm-12">
@@ -6,7 +6,7 @@
 			<%= image_tag ('banners/students_b.jpg') %>
 		</div>
 		<h1> </h1>
-		<h3 class="hub_para"></h3>
+		<h3 class="hub_para">For Graduate Students</h3>
 	</div>
 
 	
@@ -14,7 +14,7 @@
 	<div id="hub_left" class="col-sm-6 clearfix">
 		<ul>
 			<li><%= link_to 'NGSA', '/students/ngsa', :class => 'ngsa_link' %></li>
-			<li><%= link_to 'Support & Training Grants', '/gr/finaid', :class => 'finaid_link' %></li>
+			<li><%= link_to 'Support & Training Grants', '/prospect/finaid', :class => 'finaid_link' %></li>
 			<li><%= link_to 'Program Curriculum', '/gr/curriculum', :class => 'cs_progseq_link' %></li>
 		</ul>
 	</div>
@@ -26,4 +26,27 @@
 		</ul>
 	</div>
 
-	
+	<div id="hub_text" class="col-sm-12">
+		<h1> </h1>
+		<h3 class="hub_para">For Undergraduate Students</h3>
+	</div>
+
+	<p style="clear:both"></p>
+
+	<div id="hub_left" class="col-sm-6 clearfix">
+		<ul>
+			<li><%= link_to 'NUSA', 'https://nolecentral.dsa.fsu.edu/organization/NUSA', :class => 'nusa_link', :target => "_blank" %></li>
+		</ul>
+	</div>
+	<div id="hub_right" class="col-sm-6 clearfix">
+		<ul>
+			<li><%= link_to 'Tri-Beta', 'http://tri-beta.neuro.fsu.edu/', :class => 'trib_link', :target => "_blank" %></li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+
+
