@@ -12,13 +12,16 @@
         <h4><%= @person.prefix %> <%= @person.fname %> <%= @person.lname %> is currently accepting new graduate students.</h4>
       </div>
     <% end %>
-   	  <div class="profile">
-     		  <% unless Rails.application.assets.find_asset("profiles/#{@person.user_name}.jpg") %>
-               <%= image_tag("profiles/default.gif") %>
-          <% else %>
-              <%= image_tag("profiles/#{@person.user_name}.jpg") %>
-          <% end %>
-     	</div>
+   	<div class="profile">
+      <% if Rails.application.assets.find_asset("profiles/#{@person.user_name}.jpg") %>
+        <%= image_tag("profiles/#{@person.user_name}.jpg") %>
+      <% elsif Rails.application.assets.find_asset("profiles/#{@person.user_name}.gif") %>
+        <%= image_tag("profiles/#{@person.user_name}.gif") %>
+      <% else %>
+        <%= image_tag("profiles/default.gif") %>
+    <% end %>
+</div>
+
    </div>
    
    <p> </p>

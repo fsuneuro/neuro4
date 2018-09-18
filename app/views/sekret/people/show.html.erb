@@ -4,21 +4,24 @@
 
 <div id="main_con" class="container">
 
-<div class="row">
+   <div class="row">
 
-	<div>
-		<!-- # Space for accepting student text -->
-		<% if @person.search == true %>
-			<div>
-				<h4><%= @person.prefix %> <%= @person.fname %> <%= @person.lname %> is currently accepting new graduate students.</h4>
-			</div>
-		<% end %>
-	</div>
+   <div id="person_left_show" class="col-sm-6">
+    <% if @person.search == true %>
+      <div>
+        <h4><%= @person.prefix %> <%= @person.fname %> <%= @person.lname %> is currently accepting new graduate students.</h4>
+      </div>
+    <% end %>
+   	<div class="profile">
+      <% if Rails.application.assets.find_asset("profiles/#{@person.user_name}.jpg") %>
+        <%= image_tag("profiles/#{@person.user_name}.jpg") %>
+      <% elsif Rails.application.assets.find_asset("profiles/#{@person.user_name}.gif") %>
+        <%= image_tag("profiles/#{@person.user_name}.gif") %>
+      <% else %>
+        <%= image_tag("profiles/default.gif") %>
+    <% end %>
+</div>
 
-   <div id="person_left_show" class="col-sm-6 col-md-7">
-   	   <div class="profile">
-   		<%= image_tag("#{@person.user_name}.jpg") %>
-   	   </div>
    </div>
    
    <p> </p>
@@ -28,28 +31,28 @@
 		<h4><%= @person.title %></h4>
 		<dl>
 			<dd>
-		        <% if @person.position == 'grad' %>
-		          Graduate Student
-		        <% elsif @person.position == 'postdoc' %>
-		          Postdoctoral Associate
-		        <% elsif @person.position == 'labman' %>
-		  			Lab Manager
-		  		<% elsif @person.position == 'labtech' %>
-		  			Lab Tech
-		        <% else %>
-		          <%= @person.position.capitalize %>
-		        <% end %>
-      		</dd>
+        <% if @person.position == 'grad' %>
+          Graduate Student
+        <% elsif @person.position == 'postdoc' %>
+          Postdoctoral Associate
+        <% elsif @person.position == 'labman' %>
+          Lab Manager
+        <% elsif @person.position == 'labtech' %>
+          Lab Tech
+        <% else %>
+          <%= @person.position.capitalize %>
+        <% end %>
+      </dd>
 			<dd><%= @person.school %></dd>
 			<dd><%= @person.building %> <%= @person.office %></dd>
 			<dd><%= @person.phone %></dd>
 			<dd>
-				<% if @person.email.present? %>
-						<p><%= @person.email %></p>
-					<% else %>
-						<p><%= @person.user_name %>@neuro.fsu.edu</p>
-				<% end %>
-			</dd>
+        <% if @person.email.present? %>
+            <p><%= @person.email %></p>
+          <% else %>
+            <p><%= @person.user_name %>@neuro.fsu.edu</p>
+        <% end %>
+      </dd>
 		</dl>
    </div>
   </div>
