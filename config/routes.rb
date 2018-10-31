@@ -23,7 +23,6 @@ Rails.application.routes.draw do
   get "resource/links"
   get "resource/articles"
   get "resource/cores"
-  get "resource/openings"
   get 'resource/', to: redirect('/resource/resourcehub')
 
   get "about/abouthub"

@@ -14,7 +14,7 @@
 
 	<fieldset>
 		<%= f.label :prefix %>
-		<%= f.text_field :prefix %>
+		<%= f.select :prefix, [[" ", :null], "Dr."] %>
 	</fieldset>
 	
 	<fieldset>
@@ -49,7 +49,7 @@
 
 	<fieldset>
 		<%= f.label :school %>
-		<%= f.text_field :school %>
+		<%= f.select :school, [[" ", :null], 'Biological Science', 'Biomedical Sciences', 'Mathematics', 'Psychology']  %>
 	</fieldset>
 
 	<fieldset>
@@ -79,7 +79,7 @@
 
 	<fieldset>
 		<%= f.label :building %>
-		<%= f.text_field :building %>
+		<%= f.select :building, [[" ", :null], 'KIN', 'LOV', 'MSR', 'PDB'] %>
 	</fieldset>
 
 	<fieldset>
@@ -131,6 +131,17 @@
 		<%= f.label "Accepting Students" %>
 		<%= f.check_box :search %>
 	</fieldset>
+
+	<fieldset>
+		<%= f.label "Start Date" %>
+		<%= f.date_select :startdate, :start_year => 1995, :include_blank => true %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label "Graduation Date" %>
+		<%= f.date_select :graddate, :include_blank => true %> When changing to Alumni, this value MUST be set!
+	</fieldset>
+
 
 	<%= f.submit %>
 <% end %>
