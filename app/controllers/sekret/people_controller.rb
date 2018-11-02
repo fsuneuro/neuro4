@@ -60,6 +60,6 @@ class Sekret::PeopleController < SekretController
 			:office, :phone, :pi1, :pi2, :boss_id, :interest, :research,
 			:search, :lab_name, :position, :title, :prefix, :focus1, :focus2,
 			:focus3, :labweb, :grantlink, :pubmed, :email, :scholar, :sci_index,
-			:startdate, :graddate) 
+			:startdate, :graddate, :reskey1) 
 	end
 end

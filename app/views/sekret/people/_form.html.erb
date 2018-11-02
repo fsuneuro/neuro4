@@ -54,7 +54,7 @@
 
 	<fieldset>
 		<%= f.label :position %>
-		<%= f.select :position, ['faculty', 'staff', 'postdoc', 'grad', 'labtech', 'labman', 'affiliate', 'emeritus', 'alumni', 'nn-grad', 'nn-postdoc'] %>
+		<%= f.select :position, [[" ", :null], 'faculty', 'staff', 'postdoc', 'grad', 'labtech', 'labman', 'affiliate', 'emeritus', 'alumni', 'nn-grad', 'nn-postdoc'] %>
 	</fieldset>
 
 	<fieldset>
@@ -139,7 +139,7 @@
 
 	<fieldset>
 		<%= f.label "Graduation Date" %>
-		<%= f.date_select :graddate, :include_blank => true %> When changing to Alumni, this value MUST be set!
+		<%= f.date_select :graddate, :include_blank => true %> When changing to Alumni, this value MUST be set!!
 	</fieldset>
 
 
