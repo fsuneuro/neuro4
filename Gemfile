@@ -15,7 +15,7 @@ gem 'bootstrap-sass'
 gem 'bootstrap-datepicker-rails'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails'
@@ -34,19 +34,15 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
+gem 'sdoc', require: false, :group => :doc
 
 
-group :development do
 	#surpesses static assets from the log files.
-	gem 'quiet_assets'
-	gem 'capistrano', '2.15.7'
+gem 'quiet_assets', :group => :development
+gem 'capistrano', '2.15.7', :group => :development
 	# cap tasks to manage puma application server
 	
-end
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.2'
