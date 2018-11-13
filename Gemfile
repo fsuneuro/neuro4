@@ -39,12 +39,10 @@ gem 'sdoc', require: false, :group => :doc
 
 
 	#surpesses static assets from the log files.
-gem 'quiet_assets'#, :group => :development
-#gem 'capistrano', '2.15.7', :group => :development
+gem 'quiet_assets', :group => :development
+gem 'capistrano', '2.15.7', :group => :development
 	# cap tasks to manage puma application server
-gem 'capistrano', '~> 3.11.0'#, require: false, group: :development
-gem 'capistrano-rails',   '~> 1.1'#, require: false, group: :development
-gem 'capistrano-bundler', '~> 1.1'#, require: false, group: :development
+	
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.2'
