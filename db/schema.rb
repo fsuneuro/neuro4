@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181101173326) do
+ActiveRecord::Schema.define(version: 20181004134048) do
 
   create_table "disgrads", force: :cascade do |t|
     t.string   "fname",            limit: 255
@@ -22,16 +22,6 @@ ActiveRecord::Schema.define(version: 20181101173326) do
     t.string   "link",             limit: 255
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
-  end
-
-  create_table "fac_keys", force: :cascade do |t|
-    t.integer "fac_key_id", limit: 4
-    t.string  "fk_type",    limit: 255
-    t.integer "keyword_id", limit: 4
-  end
-
-  create_table "keywords", force: :cascade do |t|
-    t.string "key", limit: 255
   end
 
   create_table "people", force: :cascade do |t|
