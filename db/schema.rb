@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181004134048) do
+ActiveRecord::Schema.define(version: 20181129232006) do
 
   create_table "disgrads", force: :cascade do |t|
     t.string   "fname",            limit: 255
@@ -51,11 +51,8 @@ ActiveRecord::Schema.define(version: 20181004134048) do
     t.string   "email",      limit: 255
     t.string   "scholar",    limit: 255
     t.string   "sci_index",  limit: 255
-    t.string   "reskey1",    limit: 255
-    t.string   "reskey2",    limit: 255
-    t.string   "reskey3",    limit: 255
-    t.datetime "startdate"
-    t.datetime "graddate"
+    t.date     "startdate"
+    t.date     "graddate"
   end
 
   add_index "people", ["boss_id"], name: "index_people_on_boss_id", using: :btree
