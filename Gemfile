@@ -41,13 +41,13 @@ group :doc do
 end
 
 
-
+group :development do
 	#surpesses static assets from the log files.
-gem 'quiet_assets'
-gem 'capistrano', '2.15.7'
+	gem 'quiet_assets'
+	gem 'capistrano', '2.15.7'
 	# cap tasks to manage puma application server
 	
-
+end
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.2'
