@@ -42,8 +42,8 @@ end
 
 
 
-gem 'quiet_assets'
-gem 'capistrano', '2.15.7'
+gem 'quiet_assets', :group => :development
+gem 'capistrano', '2.15.7', :group => :development
 	# cap tasks to manage puma application server
 
 
