@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181129232006) do
+ActiveRecord::Schema.define(version: 20181203151923) do
 
   create_table "disgrads", force: :cascade do |t|
     t.string   "fname",            limit: 255
@@ -23,6 +23,22 @@ ActiveRecord::Schema.define(version: 20181129232006) do
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
   end
+
+  create_table "keylinks", force: :cascade do |t|
+    t.integer "keylinkid", limit: 4
+    t.string  "keytype",   limit: 255
+    t.integer "keywordid", limit: 4
+    t.integer "personID",  limit: 4
+  end
+
+  add_index "keylinks", ["keylinkid"], name: "index_keylinks_on_keylinkid", using: :btree
+
+  create_table "keywords", force: :cascade do |t|
+    t.string  "tag",       limit: 255
+    t.integer "keywordid", limit: 4
+  end
+
+  add_index "keywords", ["keywordid"], name: "index_keywords_on_keywordid", using: :btree
 
   create_table "people", force: :cascade do |t|
     t.string   "fname",      limit: 255
@@ -53,9 +69,11 @@ ActiveRecord::Schema.define(version: 20181129232006) do
     t.string   "sci_index",  limit: 255
     t.date     "startdate"
     t.date     "graddate"
+    t.integer  "reskeyID",   limit: 4
   end
 
   add_index "people", ["boss_id"], name: "index_people_on_boss_id", using: :btree
+  add_index "people", ["reskeyID"], name: "index_people_on_reskeyID", using: :btree
 
   create_table "pubs", force: :cascade do |t|
     t.integer  "person_id",  limit: 4
