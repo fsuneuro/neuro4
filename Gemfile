@@ -34,6 +34,8 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# tracking/analytics service, Google Analytics
+gem 'rack-tracker'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -44,7 +46,7 @@ end
 
 gem 'quiet_assets', :group => :development
 gem 'capistrano', '2.15.7', :group => :development
-	# cap tasks to manage puma application server
+	# cap tasks to manage puma application server  for production add ", :group => :development"
 
 
 # Use ActiveModel has_secure_password

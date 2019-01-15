@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FSU Program in Neuroscience | <%= yield(:title) %></title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-  <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Global site tag (gtag.js) - Google Analytics 
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132433958-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-132433958-1');
+	</script>-->
+
+	 <title>FSU Program in Neuroscience | <%= yield(:title) %></title>
+	 <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	 <%= csrf_meta_tags %>
+	 <meta name ="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <%= render 'layouts/header' %>
