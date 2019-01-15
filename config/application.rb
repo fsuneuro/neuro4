@@ -6,9 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-config.middleware.use(Rack::Tracker) do
-  handler :google_analytics, { tracker: 'UA-132433958-1' }
-end
+#config.middleware.use(Rack::Tracker) do
+
+#  handler :google_analytics, { tracker: 'UA-132433958-1' }
+#end
 
 module Neuro
   class Application < Rails::Application
