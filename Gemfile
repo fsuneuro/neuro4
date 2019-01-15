@@ -35,7 +35,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # tracking/analytics service, Google Analytics
-gem 'rack-tracker'
+#gem 'rack-tracker'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
