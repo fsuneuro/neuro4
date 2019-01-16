@@ -135,31 +135,31 @@
                     <td>
                       <% if sub.position == 'grad' %>
                         <p>
-                          <%= link_to(sekret_person_path(sub.position, sub.user_name)) do %>
+                          <%= link_to(friendly_person_path(sub.position, sub.user_name)) do %>
                             <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>,
                            Graduate Student
                         </p>
                       <% elsif sub.position == 'postdoc' %>
                         <p>
-                          <%= link_to(sekret_person_path(sub.position, sub.user_name)) do %>
+                          <%= link_to(vperson_path(sub.position, sub.user_name)) do %>
                             <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>,
                            Postdoctoral Associate
                         </p>
                       <% elsif sub.position == 'labman' %>
                         <p>
-                          <%= link_to(sekret_person_path(sub.position, sub.user_name)) do %>
+                          <%= link_to(friendly_person_path(sub.position, sub.user_name)) do %>
                             <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>,
                            Lab Manager
                         </p>
                       <% elsif sub.position == 'labtech' %>
                         <p>
-                          <%= link_to(sekret_person_path(sub.position, sub.user_name)) do %>
+                          <%= link_to(friendly_person_path(sub.position, sub.user_name)) do %>
                             <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>,
                            Lab Tech
                         </p>
                       <% elsif sub.position == 'nn-grad' %>
                         <p>
-                          <%= link_to(sekret_person_path(sub.position, sub.user_name)) do %>
+                          <%= link_to(friendly_person_path(sub.position, sub.user_name)) do %>
                             <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>,
                              Graduate Student - <%= @person.school.capitalize %>
                         </p>
