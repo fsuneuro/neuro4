@@ -141,7 +141,7 @@
                         </p>
                       <% elsif sub.position == 'postdoc' %>
                         <p>
-                          <%= link_to(vperson_path(sub.position, sub.user_name)) do %>
+                          <%= link_to(friendly_person_path(sub.position, sub.user_name)) do %>
                             <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>,
                            Postdoctoral Associate
                         </p>
