@@ -1,4 +1,4 @@
-<%= form_for [:sekret, person] do |f| %>
+<%= form_for [:sekret, @person] do |f| %>
 
 	<% if @person.errors.any? %>
 		<div id="error_explanation">
@@ -18,12 +18,12 @@
 	</fieldset>
 	
 	<fieldset>
-		<%= f.label :First_Name %>
+		<%= f.label :First_Name, "First Name" %>
 		<%= f.text_field :fname %>
 	</fieldset>
 
 	<fieldset>
-		<%= f.label :last_name %>
+		<%= f.label :last_name, "Last Name" %>
 		<%= f.text_field :lname %>
 	</fieldset>
 
@@ -130,6 +130,11 @@
 	<fieldset>
 		<%= f.label "Accepting Students" %>
 		<%= f.check_box :search %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label "Keywords" %>
+		<%= f.text_field :tag_list, value: f.object.tag_list.to_s %>
 	</fieldset>
 
 	<fieldset>

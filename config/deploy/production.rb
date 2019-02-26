@@ -1,8 +1,8 @@
 set :stage, :production
 
-role :app, %w{jorman@128.186.21.191}
-role :web, %w{jorman@128.186.21.191}
-role :db,  %w{jorman@128.186.21.191}
+role :app, %w{jorman@146.201.127.199}
+role :web, %w{jorman@146.201.127.199}
+role :db,  %w{jorman@146.201.127.199}
 
 
 

@@ -103,7 +103,6 @@ Rails.application.routes.draw do
   resources :articles
   resources :pubs, except: [:create, :new, :edit, :destroy]
 
-
   namespace :sekret do
     resources :people do
       resources :pubs
@@ -112,7 +111,6 @@ Rails.application.routes.draw do
     get "adminhub"
     get '', to: redirect('/sekret/adminhub')
     resources :disgrads
-    
   end
 
   

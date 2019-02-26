@@ -163,6 +163,12 @@
                             <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>,
                              Graduate Student - <%= @person.school.capitalize %>
                         </p>
+                        <% elsif sub.position == 'affiliate' %>
+                        <p>
+                          <%= link_to(friendly_person_path(sub.position, sub.user_name)) do %>
+                            <strong><%= sub.fname %> <%= sub.lname %></strong><% end %>,
+                             Affiliate - <%= @person.school.capitalize %>
+                        </p>
                       <% end %>
                     </td>
                   </tr>

@@ -21,7 +21,7 @@ default_run_options[:pty] = true
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-server "128.186.21.191", :app, :web, :db, :primary => true
+server "146.201.127.199", :app, :web, :db, :primary => true
 
 
 namespace :deploy do

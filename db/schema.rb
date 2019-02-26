@@ -13,6 +13,34 @@
 
 ActiveRecord::Schema.define(version: 20181203151923) do
 
+  create_table "ahoy_visits", force: :cascade do |t|
+    t.string   "visit_token",      limit: 255
+    t.string   "visitor_token",    limit: 255
+    t.integer  "user_id",          limit: 4
+    t.string   "ip",               limit: 255
+    t.text     "user_agent",       limit: 65535
+    t.text     "referrer",         limit: 65535
+    t.string   "referring_domain", limit: 255
+    t.text     "landing_page",     limit: 65535
+    t.string   "browser",          limit: 255
+    t.string   "os",               limit: 255
+    t.string   "device_type",      limit: 255
+    t.string   "country",          limit: 255
+    t.string   "region",           limit: 255
+    t.string   "city",             limit: 255
+    t.string   "utm_source",       limit: 255
+    t.string   "utm_medium",       limit: 255
+    t.string   "utm_term",         limit: 255
+    t.string   "utm_content",      limit: 255
+    t.string   "utm_campaign",     limit: 255
+    t.string   "app_version",      limit: 255
+    t.string   "os_version",       limit: 255
+    t.string   "platform",         limit: 255
+    t.datetime "started_at"
+  end
+
+  add_index "ahoy_visits", ["visit_token"], name: "index_ahoy_visits_on_visit_token", unique: true, using: :btree
+
   create_table "disgrads", force: :cascade do |t|
     t.string   "fname",            limit: 255
     t.string   "lname",            limit: 255
