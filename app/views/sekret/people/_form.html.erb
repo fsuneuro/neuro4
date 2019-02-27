@@ -133,11 +133,6 @@
 	</fieldset>
 
 	<fieldset>
-		<%= f.label "Keywords" %>
-		<%= f.text_field :tag_list, value: f.object.tag_list.to_s %>
-	</fieldset>
-
-	<fieldset>
 		<%= f.label "Start Date" %>
 		<%= f.date_select :startdate, :start_year => 1995, :include_blank => true %> This value MUST always be set!!
 	</fieldset>
