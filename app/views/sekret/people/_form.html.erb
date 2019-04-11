@@ -1,5 +1,7 @@
 <%= form_for [:sekret, @person] do |f| %>
 
+	
+
 	<% if @person.errors.any? %>
 		<div id="error_explanation">
 		    <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
@@ -79,7 +81,7 @@
 
 	<fieldset>
 		<%= f.label :building %>
-		<%= f.select :building, [[" ", :null], 'KIN', 'LOV', 'MSR', 'PDB'] %>
+		<%= f.select :building, [[" ", :null], 'BRF', 'KIN', 'LOV', 'MSR', 'PDB'] %>
 	</fieldset>
 
 	<fieldset>
@@ -130,6 +132,31 @@
 	<fieldset>
 		<%= f.label "Accepting Students" %>
 		<%= f.check_box :search %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label "Chemical Senses" %>
+		<%= f.check_box :ra_cs %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label "Human Neuroscience" %>
+		<%= f.check_box :ra_hn %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label "Molecular Genetics" %>
+		<%= f.check_box :ra_mg %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label "Brain Injury and Disease" %>
+		<%= f.check_box :ra_nb %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label "Neuroendocrinology" %>
+		<%= f.check_box :ra_ne %>
 	</fieldset>
 
 	<fieldset>
