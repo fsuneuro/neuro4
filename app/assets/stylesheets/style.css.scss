@@ -309,7 +309,7 @@
     text-align: center;
   }
 
-    /* events */
+    /*------------events----------------*/
 
   #person_left {
     padding-top: 5px;
@@ -405,7 +405,7 @@ footer img {
 
 
  
-/* People Pages */
+/*-----------People Pages------------*/
 
 
     .profile {
@@ -428,7 +428,7 @@ footer img {
     }
 
 
-/* Hub Pages */
+/*------------Hub Pages---------------*/
 
 
     .hub_wrap {
@@ -505,24 +505,47 @@ footer img {
     }
 
 
-  /* Event Smith page */
+  /*-------------Event Smith page-----------*/
+
+    .smith_event {
+        padding-bottom: 30px;
+        @include size(mdu) {
+           }
+          @include size(lgu) {
+            padding: 0px 80px;
+           }
+          @include size(xlu) {
+            padding: 0px 180px;
+           }
+    }
 
     .smith_left {
-        width: 35%;
+        display: inline-block;
+        padding-right: 20px;
+        padding-bottom: 30px;
     }
 
     .smith_right{
-
+        display: inline-block;
+        position: absolute;
+        padding-bottom: 30px;
     }
 
     .smith_profile {
       img{
-        width: 20%;
+        
       }
     }
 
     .smith_info {
-
+        @include size(mdu) {
+           }
+          @include size(lgu) {
+            padding: 0px 80px;
+           }
+          @include size(xlu) {
+            padding: 0px 180px;
+           }
     }
 
   /* Form Styling */

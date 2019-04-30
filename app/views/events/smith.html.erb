@@ -1,9 +1,9 @@
 <% provide(:title, "Smith Lecture") %>
 
 <div class="row">
-	<div id="hub_text" class="col-sm-12">
+	<div class="hub_text" class="col-sm-12">
 
-		<div class="hub_para">
+		<div class="smith_info clearfix">
 			<div class="hub_header_image">
 				<%= image_tag ('banners/smith_banner.jpg') %>
 			</div>
@@ -17,150 +17,171 @@
 		</div>
 
 		<div class="hub_para">
-			<div style="clear:both" id="smith_left">
-		   	   <div>
-		   		<%= image_tag("smith/smith_moran.jpg") %>
-		   	   </div>
-		    </div>
-		    <div id="smith_left">
-		   		<h3>Tim Moran (Johns Hopkins School of Medicine)</h3>
-				<h4>2018</h4>
-				<dl>
-					<dd>Gastrointestinal Feedback and the Control of Meals</dd>
-					<dd><%= link_to 'View pictures from this event.', 'https://www.flickr.com/photos/130941966@N03/albums/72157665085393967' %></dd>
-				</dl>
-		    </div>
-
-			<div style="clear:both" id="smith_left">
-		   	   <div>
-		   		<%= image_tag("smith/smith_hildebrand.jpg") %>
-		   	   </div>
-		    </div>
-		    <div id="smith_left">
-		   		<h3>John Hildebrand (Univ. of Arizona)</h3>
-				<h4>2017</h4>
-				<dl>
-					<dd>Learning from insect brains: How insects smell, and why we should care.</dd>
-					<dd><%= link_to 'View pictures from this event.', 'https://www.flickr.com/photos/130941966@N03/albums/72157681185126455' %></dd>
-				</dl>
+			<div class="smith_event clearfix">
+		   		<div class="smith_left">
+		   			<%= image_tag("smith/smith_bartoshuk.jpg", style: 'height:100%;width:auto;') %>
+		   		</div>
+		  		<div class="smith_right">
+		   			<h3> Linda M. Bartoshuk, Ph.D., Bushnell Professor, Department of Food Science and Nutrition, Institute of Food and Agricultural Sciences, University of Florida and Member, U.S. National Academy of Sciences</h3>
+					<h4>March 15, 2019</h4>
+					<dl>
+						<dd>The Concept of Flavor and How Specific Odorants Can Enhance Sweetness</dd>
+						<dd><%= link_to 'View pictures from this event.', 'https://www.flickr.com/photos/130941966@N03/albums/72157665085393967' %></dd>
+						<dd><%= link_to 'Download Event Program', asset_path("smith2019.pdf") %></dd>
+					</dl>
+		    	</div>
 		    </div>
 
-			<div style="clear:both" id="smith_left">
-		   	   <div>
-		   		<%= image_tag("smith/smith_spector.jpg") %>
+			<div class="smith_event clearfix">
+		   	   <div class="smith_left">
+		   		<%= image_tag("smith/smith_moran.jpg", style: 'height:100%;width:auto;') %>
 		   	   </div>
-		    </div>
-		    <div id="smith_left">
-		   		<h3>Alan Spector (FSU)</h3>
-				<h4>2016</h4>
-				<dl>
-					<dd>The Neural Basis of Salt Taste: The Interpretive Power of Animal Psychophysics</dd>
-					<dd><%= link_to 'View pictures from this event.', 'https://www.flickr.com/photos/130941966@N03/albums/72157665254839003' %></dd>
-				</dl>
+			    <div class="smith_right">
+			   		<h3>Timothy H. Moran, Ph.D, Paul R. McHugh Professor of Motivated Behaviors, Department of Psychiatry and Behavioral Sciences, Johns Hopkins School of Medicine</h3>
+					<h4>March 9, 2018</h4>
+					<dl>
+						<dd>Gastrointestinal Feedback and the Control of Meals</dd>
+						<dd><%= link_to 'View pictures from this event.', 'https://www.flickr.com/photos/130941966@N03/albums/72157665085393967' %></dd>
+						<dd><%= link_to 'Download Event Program', asset_path("smith2018.pdf") %></dd>
+					</dl>
+			    </div>
+			</div>
+
+			<div class="smith_event clearfix">
+		   	   <div class="smith_left">
+		   		<%= image_tag("smith/smith_hildebrand.jpg", style: 'height:100%;width:auto;') %>
+		   	   </div>
+				<div class="smith_right">
+			   		<h3>John G. Hildebrand, Ph.D.,  Foreign Secretary, U.S. National Academy of Sciences, and Regents Professor, Department of Neuroscience, University of Arizona</h3>
+					<h4>March 3, 2017</h4>
+					<dl>
+						<dd>Learning from Insect Brains: How Insects Smell and Why We Should Care</dd>
+						<dd><%= link_to 'View pictures from this event.', 'https://www.flickr.com/photos/130941966@N03/albums/72157681185126455' %></dd>
+						<dd><%= link_to 'Download Event Program', asset_path("smith2017.pdf") %></dd>
+					</dl>
+			    </div>
+			</div>
+
+			<div class="smith_event clearfix">
+		   		<div class="smith_left">
+		   			<%= image_tag("smith/smith_spector.jpg", style: 'height:100%;width:auto;') %>
+		   		</div>
+		    	<div class="smith_right">
+			   		<h3>Alan C. Spector, Ph.D., Distinguished Research Professor, Department of Psychology and Program in Neuroscience, Florida State University</h3>
+					<h4>March 4, 2016</h4>
+					<dl>
+						<dd>The Neural Basis of Salt Taste: The Interpretive Power of Animal Psychophysics</dd>
+						<dd><%= link_to 'View pictures from this event.', 'https://www.flickr.com/photos/130941966@N03/albums/72157665254839003' %></dd>
+						<dd><%= link_to 'Download Event Program', asset_path("smith2016.pdf") %></dd>
+					</dl>
+		    	</div>
 		    </div>
 
-		    <div style="clear:both" id="smith_left">
-		   	   <div>
-		   		<%= image_tag("smith/smith_rinaman.jpg") %>
-		   	   </div>
-		    </div>
-		    <div id="smith_left">
-		   		<h3>Linda Rinaman (Pitt) </h3>
-				<h4>2015</h4>
-				<dl>
-					<dd>Interoceptive Modulation of Behavioral Responses to Stress</dd>
-					<dd><%= link_to 'View pictures from this event.', 'https://www.flickr.com/photos/130941966@N03/albums/72157650597971382' %></dd>
-				</dl>
-		    </div>
-
-		    <div style="clear:both" id="smith_left">
-		   	   <div>
-		   		<%= image_tag("smith/smith_norgren.jpg") %>
-		   	   </div>
-		    </div>
-		    <div id="smith_left">
-		   		<h3>Ralph Norgren (Penn State) </h3>
-				<h4>2014</h4>
-				<dl>
-					<dd>The Search for Sweet</dd>
-					<dd><%= link_to 'View pictures from this event.', 'https://www.flickr.com/photos/130941966@N03/albums/72157650788926021' %></dd>
-				</dl>
-		    </div>
-
-		    <div style="clear:both" id="smith_left">
-		   	   <div>
-		   		<%= image_tag("smith/smith_sclafani.jpg") %>
-		   	   </div>
-		    </div>
-		    <div id="smith_left">
-		   		<h3>Tony Sclafani (Brooklyn College, CUNY) </h3>
-				<h4>2013</h4>
-				<dl>
-					<dd>Gut-Brain Nutrient Signaling: Appetition vs. Satiation</dd>
-				</dl>
-		    </div>
-
-		    <div style="clear:both" id="smith_left">
-		   	   <div>
-		   		<%= image_tag("smith/smith_grill.jpg") %>
-		   	   </div>
-		    </div>		    
-		    <div id="smith_left">
-		   		<h3>Harvey Grill (U Penn) </h3>
-				<h4>2012</h4>
-				<dl>
-					<dd>Hindbrain Neurons: An Essential Hub in the Neuroanatomically Distributed Control of Feeding Behavior</dd>
-				</dl>
-		    </div>
-
-		    <div style="clear:both" id="smith_left">
-		   	   <div>
-		   		<%= image_tag("smith/smith_carroll.jpg") %>
-		   	   </div>
-		    </div>
-
-		    <div id="smith_left">
-		   		<h3>Marilyn Carroll (U Minnesota)</h3>
-				<h4>2011</h4>
-				<dl>
-					<dd>Avidity for Food, Sweets, Exercise, Novelty: How It Relates to Drug Abuse</dd>
-				</dl>
-		    </div>
-
-		    <div style="clear:both" id="smith_left">
-		   	   <div>
-		   		<%= image_tag("smith/smith_gerry.jpg") %>
-		   	   </div>
+		    <div class="smith_event clearfix">
+		   		<div class="smith_left">
+		   			<%= image_tag("smith/smith_rinaman.jpg", style: 'height:100%;width:auto;') %>
+		   		</div>
+		   		<div class="smith_right">
+			   		<h3>Linda Rinaman, Ph.D., Professor of Neuroscience and Assistant Dean of Graduate Studies and Research, Dietrich School of Arts and Sciences, University of Pittsburgh</h3>
+					<h4>January 30, 2015</h4>
+					<dl>
+						<dd>Interoceptive Modulation of Behavioral Responses to Stress: Neural Pathways and Physiological Integration</dd>
+						<dd><%= link_to 'View pictures from this event.', 'https://www.flickr.com/photos/130941966@N03/albums/72157650597971382' %></dd>
+						<dd><%= link_to 'Download Event Program', asset_path("smith2015.pdf") %></dd>
+					</dl>
+		    	</div>
 		    </div>
 		    
-		    <div id="smith_left">
-		   		<h3>Gerry Smith (Cornell U) </h3>
-				<h4>2010</h4>
-				<dl>
-					<dd>Orosensory Controls of Eating, Meal Size, and Diet-induced Obesity</dd>
-				</dl>
+
+		    <div class="smith_event clearfix">
+		   		<div class="smith_left">
+		   			<%= image_tag("smith/smith_norgren.jpg", style: 'height:100%;width:auto;') %>
+		   		</div>
+		    	<div class="smith_right">
+			   		<h3>Ralph Norgren, Ph.D., Distinguished Professor of Neural and Behavioral Sciences at the Pennsylvania State University College of Medicine</h3>
+					<h4>February 29, 2014</h4>
+					<dl>
+						<dd>The Search for Sweet</dd>
+						<dd><%= link_to 'View pictures from this event.', 'https://www.flickr.com/photos/130941966@N03/albums/72157650788926021' %></dd>
+						<dd><%= link_to 'Download Event Program', asset_path("smith2014.pdf") %></dd>
+					</dl>
+			    </div>
+			</div>
+
+		    <div class="smith_event clearfix">
+		   		<div class="smith_left">
+		   			<%= image_tag("smith/smith_sclafani.jpg", style: 'height:100%;width:auto;') %>
+		   		</div>
+		    	<div class="smith_right">
+			   		<h3>Anthony Sclafani, Ph.D., Distinguished Professor of Psychology, Brooklyn College, City University of New York</h3>
+					<h4>March 1, 2013</h4>
+					<dl>
+						<dd>Gut-Brain Nutrient Signaling: Appetition vs. Satiation</dd>
+						<dd><%= link_to 'Download Event Program', asset_path("smith2013.pdf") %></dd>
+					</dl>
+			    </div>
+			</div>
+
+		    <div class="smith_event clearfix">
+		   		<div class="smith_left">
+		   			<%= image_tag("smith/smith_grill.jpg", style: 'height:100%;width:auto;') %>
+		   		</div>
+		    	<div class="smith_right">
+			   		<h3>Harvey J. Grill, Ph.D., Professor of Behavioral Neuroscience, University of Pennsylvania</h3>
+					<h4>March 30, 2012</h4>
+					<dl>
+						<dd>Hindbrain Neurons: An Essential Hub in the Neuroanatomically Distributed Control of Feeding Behavior</dd>
+					</dl>
+			    </div>
+			</div>
+
+		    <div class="smith_event clearfix">
+		   		<div class="smith_left">
+		   			<%= image_tag("smith/smith_carroll.jpg", style: 'height:100%;width:auto;') %>
+		   		</div>
+		    	<div class="smith_right">
+			   		<h3>Marilyn Carroll, Ph.D., Professor of Psychiatry and Neuroscience at the University of Minnesota</h3>
+					<h4>February 25, 2011</h4>
+					<dl>
+						<dd>Avidity for Food, Sweets, Exercise, Novelty: How It Relates to Drug Abuse</dd>
+					</dl>
+			    </div>
+			</div>
+
+		    <div class="smith_event clearfix">
+		   		<div class="smith_left">
+		   			<%= image_tag("smith/smith_gerry.jpg", style: 'height:100%;width:auto;') %>
+		   		</div>
+		    	<div class="smith_right">
+			   		<h3>Gerard P Smith, M.D., Professor Emeritus of Behavioral Neuroscience in Psychiatry at the Weill Medical College of Cornell University</h3>
+					<h4>March 19, 2010</h4>
+					<dl>
+						<dd>Orosensory Controls of Eating, Meal Size, and Diet-Induced Obesity</dd>
+						<dd><%= link_to 'Download Event Program', asset_path("smith2010.pdf") %></dd>
+					</dl>
+			    </div>
+			</div>
+
+			<div class="smith_event clearfix">   
+			    <div class="smith_left">
+				    <%= image_tag("smith/smith_woods.jpg", style: 'height:100%;width:auto;') %>
+				</div>
+			    <div class="smith_right">
+				   	<h3>Stephen C. Woods, Ph.D., Professor of Psychiatry and Director of the Obesity Research Center at the University of Cincinnati College of Medicine</h3>
+					<h4>October 17, 2008</h4>
+					<dl>
+						<dd>The Control of Food Intake: Behavioral vs. Molecular Perspectives</dd>
+						<dd><%= link_to 'Download Event Program', asset_path("smith2008.pdf") %></dd>
+					</dl>
+				</div>
 		    </div>
-
-		    <div style="clear:both" id="smith_left">
-			    <div>
-			   		<%= image_tag("smith/smith_woods.jpg") %>
-			   	</div>
-		    </div>
-
-		    <div id="smith_left">
-		   		<h3>Steve Woods (U Cincinnati) </h3>
-				<h4>2009</h4>
-				<dl>
-					<dd>The Control of Food Intake: Behavioral vs. Molecular Perspectives</dd>
-				</dl>
-		    </div>
-	    </div>
+		</div>
 
 
-	    <div style="clear:both" class="hub_para">
-	    	</br >
-	    	<h1> </h1>
-			<h4>About James C. Smith, Ph. D.</h4>
+		<div class="smith_info clearfix">
+		    </br >
+		    <h1> </h1>
+			<h3>About James C. Smith, Ph. D.</h3>
 
 			<p>After he earned his Ph.D. from Florida State University in 1959, Dr. Smith joined the faculty, and since that time has received every award that the university has to offer. In 1992 Smith was named a Robert O. Lawton Distinguished Professor, the highest award bestowed upon a faculty member by the University. Smith was also the recipient of the University Distinguished Teacher Award based on a lifetime of teaching excellence, and in 2005 the College of Arts and Sciences honored Dr. Smith as their Graduate of Distinction. Dr. Smith has also received international recognition for his scientific achievements including The Distinguished Career Award from the Society for the Study of Ingestive Behavior, a National Sigma Xi Lectureship, and the Mozell Award for Outstanding Achievement in the Chemical Senses from the Association for Chemoreception Sciences. After 52 years on the Department of Psychology faculty, Dr. Smith retired but still remains active in research at FSU as Professor Emeritus.</p>
 		</div>
