@@ -16,5 +16,6 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require jquery.flexslider
+//= require analytics.js
 //= require d3.js
 //= require_tree .

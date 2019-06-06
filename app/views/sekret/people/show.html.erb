@@ -57,7 +57,7 @@
         <% if @person.position == 'grad' %>
             <p>Dates: <%= @person.startdate.strftime("%m/%d/%Y")  %></p>
           <% elsif @person.position == 'alumni' %>
-            <p>Dates: <%= @person.startdate.strftime("%m/%d/%Y") %> - <%= @person.graddate.strftime("%m/%d/%Y") %></p>
+            <p>Dates: <%= @person.startdate %> - <%= @person.graddate %></p>
         <% end %>
       </dd>
 		</dl>

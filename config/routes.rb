@@ -25,6 +25,14 @@ Rails.application.routes.draw do
   get "resource/cores"
   get 'resource/', to: redirect('/resource/resourcehub')
 
+  get "research/researchhub"
+  get "research/chemsens"
+  get "research/humanneuro"
+  get "research/molecgen"
+  get "research/neurobio"
+  get "research/neuroendo"
+  get 'research/', to: redirect('/research/researchhub') 
+
   get "about/abouthub"
   get "about/history"
   get "about/affiliates"
@@ -68,6 +76,7 @@ Rails.application.routes.draw do
   get "support/newneuro"
   get "support/newgrad"
   get "support/newfac"
+  get "support/sunshine"
   get 'support/', to: redirect('/support/supporthub')
 
   get "ug/ughub"

@@ -13,7 +13,8 @@
 
 	 <title>FSU Program in Neuroscience | <%= yield(:title) %></title>
 	 <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-	 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	 <%= javascript_include_tag 'analytics' %>
+	 <!--<%= javascript_include_tag "application", "data-turbolinks-track" => true %>-->
 	 <%= csrf_meta_tags %>
 	 <meta name ="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -39,7 +40,7 @@
 				<li><%= link_to 'Prospective Students', '/prospect/prospecthub' %></li>
 				<li><%= link_to 'Current Students', '/students/studenthub' %></li>
 				<li><%= link_to 'People', '/people/' %></li>
-				<li><%= link_to 'About', '/about/abouthub' %></li>
+				<li><%= link_to 'Research Areas', '/research/researchhub' %></li>
 				<li><%= link_to 'Resources', '/resource/resourcehub' %></li>
 				<li><%= link_to 'Events', '/events/eventhub' %></li>
 			</ul>

@@ -1,13 +1,15 @@
 class Sekret::PeopleController < SekretController
 
 	def index
-		@people = Person.all
-
-		if params[:filter_by]
-    		@people = Person.where(:position => params[:filter_by])
-  		else
-    		@people = Person.all
-  		end
+		if params[:filter_by].present?
+		    if params[:filter_by] == 'true'
+		      @people = Person.where(ra_cs: '1')
+		    else
+		      @people = Person.where(position: params[:filter_by])
+		    end
+		  else
+		    @people = Person.all
+		  end
 	end
 
 	def show
@@ -60,6 +62,6 @@ class Sekret::PeopleController < SekretController
 			:office, :phone, :pi1, :pi2, :boss_id, :interest, :research,
 			:search, :lab_name, :position, :title, :prefix, :focus1, :focus2,
 			:focus3, :labweb, :grantlink, :pubmed, :email, :scholar, :sci_index,
-			:startdate, :graddate) 
+			:startdate, :graddate, :ra_cs, :ra_hn, :ra_mg, :ra_nb, :ra_ne) 
 	end
 end

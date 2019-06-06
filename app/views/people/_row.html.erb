@@ -10,9 +10,26 @@
 		  	</td>
 		  	<td class="names">
 		  		<div class="inner">
-		  			<p><%= link_to(friendly_person_path(person.position, person.user_name)) do %>
-  						<strong><%= person.fname %> <%= person.lname %></strong>
-					<% end %></p>
+		  			<p class="ra_icons">
+		  				<%= link_to(friendly_person_path(person.position, person.user_name)) do %>
+  							<strong><%= person.fname %> <%= person.lname %></strong>
+						<% end %>
+						<% if person.ra_cs == true %>
+			            	<%= link_to image_tag("cs_icoS.png"), '/research/researchhub', :title => "Chemical Senses, Ingestive Behavior, and Obesity" %> 
+			            <% end %>
+			            <% if person.ra_hn == true %>
+			            	<%= link_to image_tag("hn_icoS.png"), '/research/researchhub', :title => "Human Neuroscience and Animal Models of Cognition" %> 
+			            <% end %>
+			            <% if person.ra_mg == true %>
+			            	<%= link_to image_tag("mg_icoS.png"), '/research/researchhub', :title => "Molecular Genetics, Proteomics, and Membrane Biophysics" %> 
+			            <% end %>
+			            <% if person.ra_nb == true %>
+			            	<%= link_to image_tag("nb_icoS.png"), '/research/researchhub', :title => "Neurobiology of Brain Injury and Disease" %> 
+			            <% end %>
+			            <% if person.ra_ne == true %>
+			            	<%= link_to image_tag("ne_icoS.png"), '/research/researchhub', :title => "Neuroendocrinology, Social Behavior, Stress, and Drug Addiction" %> 
+			            <% end %>
+					</p>
 					
 					<% if person.boss.blank? %>
 							<p><%= person.title %></p>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181203151923) do
+ActiveRecord::Schema.define(version: 20190524172612) do
 
   create_table "ahoy_visits", force: :cascade do |t|
     t.string   "visit_token",      limit: 255
@@ -95,12 +95,22 @@ ActiveRecord::Schema.define(version: 20181203151923) do
     t.string   "email",      limit: 255
     t.string   "scholar",    limit: 255
     t.string   "sci_index",  limit: 255
-    t.date     "startdate"
-    t.date     "graddate"
+    t.string   "startdate",  limit: 255
+    t.string   "graddate",   limit: 255
     t.integer  "reskeyID",   limit: 4
+    t.boolean  "ra_cs",      limit: 1
+    t.boolean  "ra_hn",      limit: 1
+    t.boolean  "ra_mg",      limit: 1
+    t.boolean  "ra_nb",      limit: 1
+    t.boolean  "ra_ne",      limit: 1
   end
 
   add_index "people", ["boss_id"], name: "index_people_on_boss_id", using: :btree
+  add_index "people", ["ra_cs"], name: "index_people_on_ra_cs", using: :btree
+  add_index "people", ["ra_hn"], name: "index_people_on_ra_hn", using: :btree
+  add_index "people", ["ra_mg"], name: "index_people_on_ra_mg", using: :btree
+  add_index "people", ["ra_nb"], name: "index_people_on_ra_nb", using: :btree
+  add_index "people", ["ra_ne"], name: "index_people_on_ra_ne", using: :btree
   add_index "people", ["reskeyID"], name: "index_people_on_reskeyID", using: :btree
 
   create_table "pubs", force: :cascade do |t|

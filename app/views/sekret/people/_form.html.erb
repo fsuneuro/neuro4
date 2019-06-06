@@ -15,93 +15,106 @@
 	<% end %>
 
 	<fieldset>
-		<%= f.label :prefix %>
-		<%= f.text_field :prefix %>
-	</fieldset>
-	
-	<fieldset>
-		<%= f.label :First_Name, "First Name" %>
-		<%= f.text_field :fname %>
-	</fieldset>
-
-	<fieldset>
-		<%= f.label :last_name, "Last Name" %>
-		<%= f.text_field :lname %>
+		<label>
+			Prefix
+			<%= f.text_field :prefix %>
+		</label>
+		<label>
+			Accepting Students
+			<%= f.check_box :search %>
+		</label>
 	</fieldset>
 
 	<fieldset>
-		<%= f.label :title %>
-		<%= f.text_field :title %>
+		<label>
+			First Name
+			<%= f.text_field :fname %>
+		</label>
+		<label>
+			Last Name
+			<%= f.text_field :lname %>
+		</label>
 	</fieldset>
 
 	<fieldset>
-		<%= f.label :user_name %>
-		<%= f.text_field :user_name %>
+		<label>
+			Title
+			<%= f.text_field :title %>
+		</label>
+		<label>
+			Author Name
+			<%= f.text_field :auth_id %>
+		</label>
 	</fieldset>
 
 	<fieldset>
-		<%= f.label :email %>
-		<%= f.text_field :email %>
+		<label>
+			Username
+			<%= f.text_field :user_name %>
+		</label>
+		<label>
+			Ext Email
+			<%= f.text_field :email %>
+		</label>
 	</fieldset>
 
 	<fieldset>
-		<%= f.label :author_name %>
-		<%= f.text_field :auth_id %>
+		<label>
+			School
+			<%= f.select :school, [[" ", :null], 'Biological Science', 'Biomedical Sciences', 'Mathematics', 'Psychology']  %>
+		</label>
+		<label>
+			Position
+			<%= f.select :position, [[" ", :null], 'faculty', 'staff', 'postdoc', 'grad', 'labtech', 'labman', 'affiliate', 'emeritus', 'alumni', 'nn-grad', 'nn-postdoc'] %>
+		</label>
 	</fieldset>
 
 	<fieldset>
-		<%= f.label :school %>
-		<%= f.select :school, [[" ", :null], 'Biological Science', 'Biomedical Sciences', 'Mathematics', 'Psychology']  %>
+		<label>
+			Boss
+			<%= f.select :boss_id, [[" ", :null], ["D Fadool", 1], ["Arbeitman", 2], ["Bertram", 3], ["Bhide", 4], ["Blaber", 5], ["Bolanos", 6], ["Contreras", 7], ["Dewan", 188], ["Eckel", 8], ["J Fadool", 9], ["Feng", 110], ["Hajack", 167], ["Hammock", 10], ["Houpt", 11], ["Hull", 12], ["Hyson", 13], ["Johnson", 14], ["Kabbaj", 15], ["Kumar", 16], ["Lee", 17], ["Levenson", 18], ["Li", 19], ["Lyons", 20], ["Megraw", 21], ["Meredith", 22], ["Nowakowski", 23], ["Oclese", 24], ["Ren", 25], ["Rinaman", 155], ["Spector", 26], ["Stanwood", 27], ["Trombley", 28], ["Y Wang", 29], ["Z Wang", 30], ["Wilber", 147], ["Williams", 31], ["Zhang", 189], ["Zhou", 32]] %>
+		</label>
+		<label>
+			Lab Name
+			<%= f.select :lab_name, [[" ", :null], "D Fadool", "Arbeitman", "Bertram", "Bhide", "Blaber", "Bolanos", "Contreras", "Dewan", "Eckel", "J Fadool", "Feng", "Hajack", "Hammock", "Houpt", "Hull", "Hyson", "Johnson", "Kabbaj", "Kumar", "Lee", "Levenson", "Li", "Lyons", "Megraw", "Meredith", "Nowakowski", "Oclese", "Ren", "Rinaman", "Spector", "Stanwood", "Trombley", "Y Wang", "Z Wang","Wilber", "Williams", "Zhang", "Zhou"] %>
+		</label>
 	</fieldset>
 
 	<fieldset>
-		<%= f.label :position %>
-		<%= f.select :position, [[" ", :null], 'faculty', 'staff', 'postdoc', 'grad', 'labtech', 'labman', 'affiliate', 'emeritus', 'alumni', 'nn-grad', 'nn-postdoc'] %>
+		<label>
+			Grant Link
+			<%= f.url_field :grantlink %>
+		</label>
+		<label>
+			Ext Web Link
+			<%= f.url_field :labweb %>
+		</label>
 	</fieldset>
 
 	<fieldset>
-		<%= f.label :boss_id %>
-		<%= f.select :boss_id, [[" ", :null], ["D Fadool", 1], ["Arbeitman", 2], ["Bertram", 3], ["Bhide", 4], ["Blaber", 5], ["Bolanos", 6], ["Contreras", 7], ["Dewan", 188], ["Eckel", 8], ["J Fadool", 9], ["Feng", 110], ["Hajack", 167], ["Hammock", 10], ["Houpt", 11], ["Hull", 12], ["Hyson", 13], ["Johnson", 14], ["Kabbaj", 15], ["Kumar", 16], ["Lee", 17], ["Levenson", 18], ["Li", 19], ["Lyons", 20], ["Megraw", 21], ["Meredith", 22], ["Nowakowski", 23], ["Oclese", 24], ["Ren", 25], ["Rinaman", 155], ["Spector", 26], ["Stanwood", 27], ["Trombley", 28], ["Y Wang", 29], ["Z Wang", 30], ["Wilber", 147], ["Williams", 31], ["Zhang", 189], ["Zhou", 32]] %>
+		<label>
+			Building
+			<%= f.select :building, [[" ", :null], 'BRF', 'KIN', 'LOV', 'MSR', 'PDB'] %>
+		</label>
+		<label>
+			Office
+			<%= f.text_field :office %>
+		</label>
+		<label>
+			Phone
+			<%= f.text_field :phone %>
+		</label>
 	</fieldset>
 
 	<fieldset>
-		<%= f.label :lab_name %>
-		<%= f.select :lab_name, [[" ", :null], "D Fadool", "Arbeitman", "Bertram", "Bhide", "Blaber", "Bolanos", "Contreras", "Dewan", "Eckel", "J Fadool", "Feng", "Hajack", "Hammock", "Houpt", "Hull", "Hyson", "Johnson", "Kabbaj", "Kumar", "Lee", "Levenson", "Li", "Lyons", "Megraw", "Meredith", "Nowakowski", "Oclese", "Ren", "Rinaman", "Spector", "Stanwood", "Trombley", "Y Wang", "Z Wang","Wilber", "Williams", "Zhang", "Zhou"] %>
-	</fieldset>
-
-	<fieldset>
-		<%= f.label :external_Web_Link %>
-		<%= f.url_field :labweb %>  ** For Lab Websites or Bio for external personel. **
-	</fieldset>
-
-	<fieldset>
-		<%= f.label :grant_link %>
-		<%= f.url_field :grantlink %>
-	</fieldset>
-
-	<fieldset>
-		<%= f.label :building %>
-		<%= f.select :building, [[" ", :null], 'BRF', 'KIN', 'LOV', 'MSR', 'PDB'] %>
-	</fieldset>
-
-	<fieldset>
-		<%= f.label :office %>
-		<%= f.text_field :office %>
-	</fieldset>
-
-	<fieldset>
-		<%= f.label :phone %>
-		<%= f.text_field :phone %>
-	</fieldset>
-
-	<fieldset>
-		<%= f.label :pi1 %>
-		<%= f.text_field :pi1 %>
-	</fieldset>
-
-	<fieldset>
-		<%= f.label :pi2 %>
-		<%= f.text_field :pi2 %>
+		<label>
+			PI 1
+			<%= f.text_field :pi1 %>
+		</label>
+		<label>
+			PI 2
+			<%= f.text_field :pi2 %>
+		</label>
 	</fieldset>
 
 	<fieldset>
@@ -130,20 +143,37 @@
 	</fieldset>
 
 	<fieldset>
-		<%= f.label "Accepting Students" %>
-		<%= f.check_box :search %>
+		<label>
+			Chemical Senses
+			<%= f.check_box :ra_cs %>
+		</label>
+		<label>
+			Human Neuroscience
+			<%= f.check_box :ra_hn %>
+		</label>
+		<label>
+			Molecular Genetics
+			<%= f.check_box :ra_mg %>
+		</label>
+		<label>
+			Neurobiology
+			<%= f.check_box :ra_nb %>
+		</label>
+		<label>
+			Neuroendocrinology
+			<%= f.check_box :ra_ne %>
+		</label>
 	</fieldset>
 
-	
-
 	<fieldset>
-		<%= f.label "Start Date" %>
-		<%= f.date_select :startdate, :start_year => 1995, :include_blank => true %> This value MUST always be set!!
-	</fieldset>
-
-	<fieldset>
-		<%= f.label "Graduation Date" %>
-		<%= f.date_select :graddate, :include_blank => true %> When changing to Alumni, this value MUST be set!!
+		<label>
+			Start Date
+			<%= f.select :startdate, (Date.today.year-25)..(Date.today.year+5), :selected => Date.today.year %>
+		</label>
+		<label>
+			Graduation Date
+			<%= f.select :graddate, (Date.today.year-5)..(Date.today.year+5), :selected => Date.today.year %> 
+		</label>
 	</fieldset>
 
 
